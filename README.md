@@ -15,20 +15,25 @@ Takım X
 
 ## Ürün İsmi
 
---Mobil App--
+Mutfakta ne var?
 
 ## Ürün Açıklaması
 
-- 
+- Mutfakta ne var? uygulamamız ile insanlar kendi seçtikleri, sahip oldukları malzemelerle hazırlayabilecekleri en uygun tarifleri bulmalarını sağlayacağız. Ayrıca kullanıcılar yapmak istedikleri tarifleri kaydedebilecek, kendilerine ait bir tarif defteri oluşturabilecek ve bu tarifleri istedikleri kişilerle paylaşabilecek.
+- Tariflerin yanı sıra kullanıcılarımıza gıda atığını önlemeye yönelik tavsiyeler vereceğiz
 
 ## Ürün Özellikleri
 
-- 
+-Kullanıcıların seçtiği malzemelere uygun tarif hazırlama
+-Kullanıcılara özel tarif defteri oluşturma ve tarif paylaşma
+-Kullanıcılara gıda atığını önlemeye yönelik tavsiyelerde bulunma
 
 
 ## Hedef Kitle
 
-- 
+- Yalnız yaşayan ve çalışan insalar,
+- Yemek yapmaya, alışverişe zamanı olmayan insanlar
+- İsrafı önlemek isteyenler,
 
 ## Product Backlog URL
 
