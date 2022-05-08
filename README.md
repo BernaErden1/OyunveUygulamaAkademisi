@@ -44,7 +44,7 @@ https://miro.com/app/board/uXjVO6URGL8=/
 
 # Sprint 1
 
-- **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+- **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
  - Zoom üzerinden ilk toplantı yapıldı.
  - Günlük iletişimin Whatsapp üzerinden yapılmasına karar verildi. Slack üzerinden de bir iletişim kanalı olabilmesi için grup oluşturuldu.
