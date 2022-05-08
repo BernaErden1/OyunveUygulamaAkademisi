@@ -15,7 +15,7 @@ Takım X
 
 ## Ürün İsmi
 
-Mutfakta ne var?
+Mutfakta neler var?
 
 ## Ürün Açıklaması
 
@@ -82,6 +82,7 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 
 
 - **Sprint Review**: 
+Tasarım geliştirilmelidir.
 
 
 - **Sprint Retrospective:**
