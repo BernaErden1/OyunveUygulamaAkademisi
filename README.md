@@ -46,12 +46,12 @@ https://miro.com/app/board/uXjVO6URGL8=/
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
--Zoom üzerinden ilk toplantı yapıldı.
-Günlük iletişimin Whatsapp üzerinden yapılmasına karar verildi. Slack üzerinden de bir iletişim kanalı olabilmesi için grup oluşturuldu.
-Görev dağılımı belirlendi. Uygulama için problem tespiti yapıldı ve problemlere ilişikin fikir havuzu oluşturularak puanlama ile fikir seçimi gerçekleştirildi. Excel üzerinde görülebilir.
+*Zoom üzerinden ilk toplantı yapıldı.
+*Günlük iletişimin Whatsapp üzerinden yapılmasına karar verildi. Slack üzerinden de bir iletişim kanalı olabilmesi için grup oluşturuldu.
+*Görev dağılımı belirlendi. Uygulama için problem tespiti yapıldı ve problemlere ilişikin fikir havuzu oluşturularak puanlama ile fikir seçimi gerçekleştirildi. Excel üzerinde görülebilir.
 [Çizelge.xlsx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8647667/Cizelge.xlsx) 
-Programın içeriğindeki araçlar belirlenmiştir ve ara yüz tasarımı Figma ile gerçekleştirilmiştir.
-User Storyler product backlogların içine yazılmıştır. Product backlog itemlara tıklandığında hikayelerin detayları okunabilir.
+*Programın içeriğindeki araçlar belirlenmiştir ve ara yüz tasarımı Figma ile gerçekleştirilmiştir.
+*User Storyler product backlogların içine yazılmıştır. Product backlog itemlara tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 80 Puan
 
