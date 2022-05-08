@@ -46,29 +46,40 @@ https://miro.com/app/board/uXjVO6URGL8=/
 
 - **Sprint Notları**: User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+-Zoom üzerinden ilk toplantı yapıldı.
+-Günlük iletişimin Whatsapp üzerinden yapılmasına karar verildi. Slack üzerinden de bir iletişim kanalı olabilmesi için grup oluşturuldu.
+-Görev dağılımı belirlendi. Uygulama için problem tespiti yapıldı ve problemlere ilişikin fikir havuzu oluşturularak puanlama ile fikir seçimi gerçekleştirildi. Excel üzerinde görülebilir.
+[Çizelge.xlsx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8647667/Cizelge.xlsx) 
+-Programın içeriğindeki araçlar belirlenmiştir ve ara yüz tasarımı Figma ile gerçekleştirilmiştir.
+-User Storyler product backlogların içine yazılmıştır. Product backlog itemlara tıklandığında hikayelerin detayları okunabilir.
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 4 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+-**Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
 - **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
 
-Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+-Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılmakta olan işleri (task) gösterirken, mavi item'lar yapılacak işleri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats]
+- **Daily Scrum**: Daily Scrum toplantılarının kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. 
 
-- **Sprint board update**: Sprint board screenshotları: 
+(whatsapp konuşmaları eklenecek)
+
+-
+
+- **Sprint board update**: 
+(Sprint board screenshotları eklenecek)
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: 
+- (figma ekran grüntüleri eklenecek)
 
 
 - **Sprint Review**: 
-Alınan kararlar: Veritabanı oluşturması email ile toplanacak veriler için gerekli görülmüştür. Fakat bir yandan da veritabanı form sayfası için gerekli olmamıştır. O sebeple PBI bir sonraki sprint'e aktarılmıştır. Çıkan ürünün çalışmasında ve testlerinde bir problem görülmemiştir. Ekstra koyulması gereken özellikler belirlenmiştir. Sprint Review katılımcıları: ......
+
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Unit test'ler için ayrılan efor/saat arttırılmalı 
+ 
 
 -**Diğer Notlar**:
 - N/A
