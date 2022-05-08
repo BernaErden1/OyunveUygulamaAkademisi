@@ -86,7 +86,7 @@ Tasarım geliştirilmelidir.
 Ürün ismi akılda kalıcı bir formata dönüştürülmelidir.
 Ek özellikler üzerine düşünülmelidir.
 Blog kısmı için aylık hangi meyvelerin iyi olduğu kısımlar eklenebilir.
-Sprint Review katılımcıları: Berna Erden, Zeynep harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
+Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
