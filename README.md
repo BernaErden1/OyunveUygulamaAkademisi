@@ -76,7 +76,9 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 
 Ürünün ara yüz tasarımı figmada yapılmıştır.
 
-![Figma1](https://user-images.githubusercontent.com/70723400/167316258-bad2fd77-acce-41ef-87c4-820fd6e5f819.JPG)
+![Figma1](https://user-images.githubusercontent.com/70723400/167316512-96d4d5b3-79c8-4467-a4a1-651e10bf2814.JPG)
+![Figma2](https://user-images.githubusercontent.com/70723400/167316514-ef490026-6503-4b68-8a96-2d1aa2bbd891.JPG)
+![Figma3](https://user-images.githubusercontent.com/70723400/167316515-5749e622-e12e-467e-9b79-6b26769f87cf.JPG)
 
 
 - **Sprint Review**: 
