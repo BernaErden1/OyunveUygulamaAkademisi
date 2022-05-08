@@ -74,6 +74,8 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 
 - **Ürün Durumu**: 
 
+Ürünün ara yüz tasarımı figmada yapılmıştır.
+
 ![Figma1](https://user-images.githubusercontent.com/70723400/167314472-22edf65e-89b4-4693-b802-bdbedc5bf2f3.JPG)
 ![Figma2](https://user-images.githubusercontent.com/70723400/167314461-54997650-13f5-4244-82b6-d695a7a40542.JPG)
 ![Figma3](https://user-images.githubusercontent.com/70723400/167314463-110d947a-e968-4cfd-ab61-c9f2a5f1a5bc.JPG)
