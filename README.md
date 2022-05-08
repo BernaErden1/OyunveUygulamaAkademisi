@@ -85,11 +85,14 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 Tasarım geliştirilmelidir.
 Ürün ismi akılda kalıcı bir formata dönüştürülmelidir.
 Ek özellikler üzerine düşünülmelidir.
-Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
+Blog kısmı için aylık hangi meyvelerin iyi olduğu kısımlar eklenebilir.
+Sprint Review katılımcıları: Berna Erden, Zeynep harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
- 
+ Sprint puanlamaları gözden geçirilmelidir.
+ Uygulamanın kod tarafındaki geliştirilmelerine daha fazla zaman ayırılmalıdır.
+ Project backlog kısmında geliştirmeler yapılmalıdır.
 
 
 # Sprint 2
