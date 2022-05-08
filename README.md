@@ -69,7 +69,7 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 
 ![Sprint1 Backlog1](https://user-images.githubusercontent.com/70723400/167314400-b331f2a9-a057-4f18-b990-faf79e9c83ff.JPG)
 ![Sprint1 Backlog2](https://user-images.githubusercontent.com/70723400/167314384-72172a8a-b3b0-4309-ab78-fbec7fb0603d.JPG)
-![Sprint1 Backlog3](https://user-images.githubusercontent.com/70723400/167314693-b3e3fffe-a7e5-41e0-9715-e79cb0547b55.JPG)
+![Sprint1 Backlog3](https://user-images.githubusercontent.com/70723400/167316626-874c73db-5bb2-449c-a295-76889663cb4f.JPG)
 
 
 - **Ürün Durumu**: 
