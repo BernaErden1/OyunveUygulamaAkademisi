@@ -83,6 +83,9 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 
 - **Sprint Review**: 
 Tasarım geliştirilmelidir.
+Ürün ismi akılda kalıcı bir formata dönüştürülmelidir.
+Ek özellikler üzerine düşünülmelidir.
+Sprint Review katılımcıları: Berna Erden, Zeynep harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
