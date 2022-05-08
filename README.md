@@ -62,7 +62,7 @@ https://miro.com/app/board/uXjVO6URGL8=/
 Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılmakta olan işleri (task) gösterirken, mavi item'lar yapılacak işleri temsil etmektedir.
 
 - **Daily Scrum**: Daily Scrum toplantılarının kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. 
-[Uploading Daily Scrum.docx…]()
+[Daily Scrum.docx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8647748/Daily.Scrum.docx)
 
 
 - **Sprint board update**: 
@@ -87,10 +87,6 @@ Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüke
 - **Sprint Retrospective:**
  
 
--**Diğer Notlar**:
-- N/A
-
----
 
 # Sprint 2
 
