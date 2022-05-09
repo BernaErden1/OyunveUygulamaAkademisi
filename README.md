@@ -24,9 +24,9 @@ Mutfakta neler var?
 
 ## Ürün Özellikleri
 
--Kullanıcıların seçtiği malzemelere uygun tarif hazırlama
--Kullanıcılara özel tarif defteri oluşturma ve tarif paylaşma
--Kullanıcılara gıda atığını önlemeye yönelik tavsiyelerde bulunma
+- Kullanıcıların seçtiği malzemelere uygun tarif hazırlama
+- Kullanıcılara özel tarif defteri oluşturma ve tarif paylaşma
+- Kullanıcılara gıda atığını önlemeye yönelik tavsiyelerde bulunma
 
 
 ## Hedef Kitle
