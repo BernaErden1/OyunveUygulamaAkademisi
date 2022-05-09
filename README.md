@@ -55,14 +55,13 @@ https://miro.com/app/board/uXjVO6URGL8=/
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 80 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in daha çok araştırma ve eksikleri tamamlama ile geçmesi planlanmaktadır. Bu sebeple en azından 80 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. 3 sprint'e bölündüğünde ilk sprint'in daha çok araştırma ve eksikleri tamamlama ile geçmesi planlanmaktadır. Bu sebeple 80 puan ile başlaması gerektiğine karar verilmiştir ve her bir task ın içerisine de ilgili puanlar yazılmıştır. Puanlama 2 nin katları olacak şekilde yapılmaktadır.
 
-- **Backlog düzeni ve Story seçimleri**: Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur. 
+- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir.
 
-Story'ler yapılacak işlere (tasklere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılmakta olan işleri (task) gösterirken, mavi item'lar yapılacak işleri temsil etmektedir.
+- **Daily Scrum**: Daily Scrum toplantıları kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle daha çok Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. Sesli ve görüntülü olarak Zoom ve Slack üzerinden toplantılar gerçekleştirilmiştir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. 
-[Daily Scrum.docx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8647748/Daily.Scrum.docx)
+[Daily Scrum.docx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8654705/Daily.Scrum.docx)
 
 
 - **Sprint board update**: 
@@ -90,7 +89,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 
 - **Sprint Retrospective:**
- Sprint puanlamaları gözden geçirilmelidir.
+ Bir sonraki sprint için puanlamalar gözden geçirilmelidir.
  Uygulamanın kod tarafındaki geliştirilmelerine daha fazla zaman ayırılmalıdır.
  Project backlog kısmında geliştirmeler yapılmalıdır.
 
