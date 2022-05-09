@@ -1,7 +1,6 @@
 # **Takım İsmi**
 
 Bootcamp Flutter Takım 98
-Takım X
 
 # Ürün İle İlgili Bilgiler
 
