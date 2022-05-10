@@ -30,7 +30,7 @@ Mutfakta neler var?
 
 ## Hedef Kitle
 
-- Yalnız yaşayan ve çalışan insalar,
+- Yalnız yaşayan ve çalışan insanlar,
 - Yemek yapmaya, alışverişe zamanı olmayan insanlar
 - İsrafı önlemek isteyenler,
 
