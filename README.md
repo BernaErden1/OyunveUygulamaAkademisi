@@ -1,6 +1,6 @@
 # **Takım İsmi**
 
-Bootcamp Flutter Takım 98
+Bootcamp Flutter Takım-98
 
 # Ürün İle İlgili Bilgiler
 
