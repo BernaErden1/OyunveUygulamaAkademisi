@@ -15,15 +15,17 @@ class _SplashScreenState extends State<SplashScreen> {
   int _start = 2;
 
   void startTimer() {
-    const oneSec = const Duration(seconds: 1);
+    const oneSec = Duration(seconds: 1);
     _timer = Timer.periodic(
       oneSec,
       (Timer timer) {
         if (_start == 0) {
           setState(() {
             timer.cancel();
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => MainPage()));
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MainPage()));
           });
         } else {
           setState(() {
@@ -36,7 +38,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     startTimer();
   }

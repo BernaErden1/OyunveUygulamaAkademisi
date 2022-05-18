@@ -3,10 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:tarifim/product/utility.dart';
 
 class LightTheme {
+  final BuildContext context;
   late ThemeData lightTema;
 
-  LightTheme() {
+  LightTheme(this.context) {
     lightTema = ThemeData(
+        fontFamily: "Alegraya",
+        textTheme: Theme.of(context).textTheme.copyWith(
+              headline4:
+                  TextStyle(color: ColorsUtility().backgroundColor),
+              subtitle1: TextStyle(
+                  color: ColorsUtility().backgroundColor,
+                  fontSize: 18),
+            ),
         scaffoldBackgroundColor: ColorsUtility().backgroundColor,
         bottomNavigationBarTheme:
             const BottomNavigationBarThemeData(),
