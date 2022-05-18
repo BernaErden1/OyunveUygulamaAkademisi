@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:tarifim/mainPage.dart';
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
+
+import 'splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Mutfakta Neler Var ?',
       theme: LightTheme().lightTema,
       darkTheme: DarkTheme().darkTema,
-      home: const MainPage(),
+      home: const SplashScreen(),
     );
   }
 }

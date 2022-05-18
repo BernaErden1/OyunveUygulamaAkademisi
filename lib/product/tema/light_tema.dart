@@ -7,19 +7,23 @@ class LightTheme {
 
   LightTheme() {
     lightTema = ThemeData(
-        textTheme: ThemeData.light().textTheme.copyWith(),
+        scaffoldBackgroundColor: ColorsUtility().backgroundColor,
+        bottomNavigationBarTheme:
+            const BottomNavigationBarThemeData(),
         tabBarTheme: TabBarTheme(
-            labelColor: ColorsUtility().thirdColor,
-            unselectedLabelColor: ColorsUtility().primaryColor),
+            labelStyle: const TextStyle(
+                fontSize: 20, decorationColor: Colors.white),
+            labelColor: ColorsUtility().backgroundColor,
+            unselectedLabelColor: ColorsUtility().backgroundColor),
         primaryColor: ColorsUtility().primaryColor,
         indicatorColor: ColorsUtility().thirdColor,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
             centerTitle: true,
             systemOverlayStyle: SystemUiOverlayStyle.dark,
-            backgroundColor: Colors.transparent,
+            backgroundColor: ColorsUtility().primaryColor,
             elevation: 1),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: ColorsUtility().primaryColor,
+            backgroundColor: ColorsUtility().thirdColor,
             elevation: 0));
   }
 }
