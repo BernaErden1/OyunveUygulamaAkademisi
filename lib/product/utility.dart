@@ -72,15 +72,21 @@ class OnboardingDot extends StatelessWidget {
   }
 }
 
-class SpaceSize extends StatelessWidget {
-  const SpaceSize({
-    Key? key,
-  }) : super(key: key);
+SizedBox spaceSize({double size = 30}) {
+  return SizedBox(
+    height: size,
+  );
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 30,
-    );
+class PaddingDimen {
+  final horizaontalPadding =
+      const EdgeInsets.symmetric(horizontal: 16);
+}
+
+class MyFormFieldValidator {
+  String? isNotEmpy(String? data) {
+    return (data?.isNotEmpty ?? false)
+        ? null
+        : "Bu alan boş geçilemez";
   }
 }

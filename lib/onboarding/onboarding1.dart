@@ -34,11 +34,11 @@ class Onboarding1 extends StatelessWidget {
                       child: Column(
                         children: [
                           HeadText(
-                            text: TurkceItemler().Onboard1Headtext,
+                            text: TurkceItemler().onboard1Headtext,
                           ),
                           SubText(
                               text: TurkceItemler().onboard1subtext),
-                          SpaceSize(),
+                          spaceSize(),
                           Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment:
@@ -57,7 +57,7 @@ class Onboarding1 extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SpaceSize(),
+                          spaceSize(),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
