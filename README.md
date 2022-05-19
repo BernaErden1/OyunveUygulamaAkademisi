@@ -50,7 +50,6 @@ https://miro.com/app/board/uXjVO6URGL8=/
 *Görev dağılımı belirlendi. Uygulama için problem tespiti yapıldı ve problemlere ilişikin fikir havuzu oluşturularak puanlama ile fikir seçimi gerçekleştirildi. Excel üzerinde görülebilir.
 [Çizelge.xlsx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8647667/Cizelge.xlsx) 
 *Programın içeriğindeki araçlar belirlenmiştir ve ara yüz tasarımı Figma ile gerçekleştirilmiştir.
-*User Storyler product backlogların içine yazılmıştır. Product backlog itemlara tıklandığında hikayelerin detayları okunabilir.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 80 Puan
 
@@ -95,9 +94,77 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 # Sprint 2
 
+- **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
----
+*Figmadaki tasarımların kod tarafında görev dağılımı yapılmıştır.
+*Ana ekran, giriş ekranı, onboardingler, giriş sayfası, profil ve favoriler ekranlarının tasarımı flutter üzerinde yapılmıştır.
+*Zoom ve slack üzerinden toplantılar gerçekleştirilmiştir ve buralarda kod tarafında herkesin aynı noktaya gelmesi sağlanmıştır
+*
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir.
+
+- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir.
+
+- **Daily Scrum**: Daily Scrum toplantıları kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle daha çok Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. Sesli ve görüntülü olarak Zoom ve Slack üzerinden toplantılar gerçekleştirilmiştir.
+
+(?)
+
+- **Sprint board update**: 
+
+(?)
+
+
+- **Ürün Durumu**: 
+
+Ürünün tasarım görüntüleri aşağıdadır:
+
+(?)
+
+- **Sprint Review**: 
+
+(?)
+Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
+
+
+- **Sprint Retrospective:**
+
+(?)
+
+
 
 # Sprint 3
 
----
+**Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+
+*Figmadaki tasarımların kod tarafında görev dağılımı yapılmıştır.
+*Ana ekran, giriş ekranı, onboardingler, giriş sayfası, profil ve favoriler ekranlarının tasarımı flutter üzerinde yapılmıştır.
+*User Storyler product backlogların içine yazılmıştır. Product backlog itemlara tıklandığında hikayelerin detayları okunabilir.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr.
+
+- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir.
+
+- **Daily Scrum**: Daily Scrum toplantıları kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle daha çok Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. Sesli ve görüntülü olarak Zoom ve Slack üzerinden toplantılar gerçekleştirilmiştir.
+
+
+- **Sprint board update**: 
+
+
+
+
+- **Ürün Durumu**: 
+
+
+
+
+- **Sprint Review**: 
+
+Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
+
+
+- **Sprint Retrospective:**
+
