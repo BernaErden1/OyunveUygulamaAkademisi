@@ -1,5 +1,3 @@
-import 'package:tarifim/onboarding/onboarding1.dart';
-
 class TurkceItemler {
   final uygIsmi = "Mutfakta Neler Var ?";
   final anasayfa = "Anasayfa";
@@ -11,5 +9,6 @@ class TurkceItemler {
   final sifremiUnuttum = "Şifremi Unuttum";
   final onboard1subtext =
       "İstediğiniz malzemeleri seçin, size en doğru yemek tarifini verelim.";
-  final Onboard1Headtext = "Yemek tarifi ara !";
+  final onboard1Headtext = "Yemek tarifi ara !";
+  final loginGoogle = "Google ile giriş yap";
 }

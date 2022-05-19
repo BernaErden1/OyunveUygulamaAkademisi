@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/giris_yap/giris_yap.dart';
-import 'package:tarifim/onboarding/onboarding1.dart';
-
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
 
