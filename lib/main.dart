@@ -4,6 +4,7 @@ import 'package:tarifim/kayit_ol/kayit_ol.dart';
 
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
+import 'package:tarifim/sifremi_unuttum/sifremi_unuttum.dart';
 import 'package:tarifim/splash/splash_screen.dart';
 
 void main() {
