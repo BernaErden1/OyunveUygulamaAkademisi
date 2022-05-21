@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
+import 'package:tarifim/Widgets/baslik_bar.dart';
 
 class GirisYap extends StatefulWidget {
   const GirisYap({Key? key}) : super(key: key);
@@ -22,12 +23,23 @@ class _GirisYapState extends State<GirisYap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(TurkceItemler().uygIsmi),
-      ),
+      
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ClipPath(
+      clipper: MyCustomClipper(),
+      child: Container(
+        alignment: Alignment.center,
+        height: 150,
+        width: double.infinity,
+        color: ColorsUtility().primaryColor,
+        child: Text(
+          'Mutfakta Neler Var?',
+          style: Theme.of(context).textTheme.headline4,
+        ),
+      ),
+    ),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
