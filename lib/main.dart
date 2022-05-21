@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Mutfakta Neler Var ?',
       theme: LightTheme(context).lightTema,
       darkTheme: DarkTheme().darkTema,
-      home: const KayitOl(),
+      home: const GirisYap(),
     );
   }
 }
