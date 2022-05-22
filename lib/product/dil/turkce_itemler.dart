@@ -21,5 +21,8 @@ class TurkceItemler {
   final kullaniciEmail = "E-posta";
   final hakkimda = "Hakkımda";
   final webSitesi = "Web sitesi";
-
+  final onboard2subtext = "Yapmak istediğiniz yemek tariflerini kaydedin.";
+  final onboard2Headtext = "Tarif defterine ekle!";
+  final onboard3subtext = "Beğendiğiniz tarifleri dostlarınızla paylaşın.";
+  final onboard3Headtext = "Tarifleri paylaşın!";
 }
