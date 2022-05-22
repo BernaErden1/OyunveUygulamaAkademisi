@@ -11,4 +11,10 @@ class TurkceItemler {
       "İstediğiniz malzemeleri seçin, size en doğru yemek tarifini verelim.";
   final onboard1Headtext = "Yemek tarifi ara !";
   final loginGoogle = "Google ile giriş yap";
+  final kullaniciAdi = "Kullanıcı Adı";
+  final profilYazisi = "Yeni başlamış bir aşcı.";
+  final takipciSayisi = "Takip Eden";
+  final takipEdilen = "Takip Edilen";
+  final takipcilerim = "Takipçilerim";
+  final degerlendirmelerim = "Değerlendirmelerim";
 }

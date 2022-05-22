@@ -7,6 +7,8 @@ class ColorsUtility {
   final Color thirdColor = const Color.fromARGB(255, 135, 0, 0);
   final Color backgroundColor =
       const Color.fromARGB(255, 253, 253, 232);
+  final Color degerlendirme = const Color.fromARGB(255, 255, 202, 0);
+  final Color yazi = const Color.fromARGB(255, 133, 106, 93);
 }
 
 Map<String, Icon> myTabItems = {
@@ -90,3 +92,6 @@ class MyFormFieldValidator {
         : "Bu alan boş geçilemez";
   }
 }
+
+
+
