@@ -28,7 +28,6 @@ class _KayitOlState extends State<KayitOl> {
         child: Column(
           children: [
             ClipPath(
-      clipper: MyCustomClipper(),
       child: Container(
         alignment: Alignment.center,
         height: 150,

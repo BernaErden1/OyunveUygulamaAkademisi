@@ -22,7 +22,6 @@ class ForgotPassword extends StatelessWidget {
         child: Column(
           children: [
             ClipPath(
-      clipper: MyCustomClipper(),
       child: Container(
         alignment: Alignment.center,
         height: 150,
@@ -45,8 +44,9 @@ class ForgotPassword extends StatelessWidget {
                 children: [
                   Text(
                     content,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 17,
+                        color: ColorsUtility().primaryColor,
                         fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
@@ -56,10 +56,10 @@ class ForgotPassword extends StatelessWidget {
                     decoration: InputDecoration(
                       prefixIcon: Image.asset('assets/mail.png'),
                       hintText: 'E-posta',
-                      enabledBorder: _buildBorder(Colors.black),
-                      disabledBorder:_buildBorder(Colors.black),
-                      focusedBorder: _buildBorder(Colors.black),
-                      errorBorder: _buildBorder(Colors.black),
+                      enabledBorder: _buildBorder(ColorsUtility().primaryColor),
+                      disabledBorder:_buildBorder(ColorsUtility().primaryColor),
+                      focusedBorder: _buildBorder(ColorsUtility().primaryColor),
+                      errorBorder: _buildBorder(ColorsUtility().primaryColor),
                     ),
                   ),
                   Row(mainAxisAlignment: MainAxisAlignment.end,children: [

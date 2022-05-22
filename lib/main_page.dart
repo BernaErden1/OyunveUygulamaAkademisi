@@ -60,7 +60,7 @@ class _MainPageState extends State<MainPage>
                     const Anasayfa(),
                     const TarifDefteriSayfasi(),
                     const ProfilSayfasi(),
-                    const ProfilAyarlarSayfasi()
+                     ProfilAyarlarSayfasi()
                   ],
                 ),
               )),
