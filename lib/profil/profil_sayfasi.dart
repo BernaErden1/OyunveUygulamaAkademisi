@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
@@ -32,11 +31,11 @@ class ProfilSayfasi extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     //profilim yazisi
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 5),
+                      padding: const EdgeInsets.only(left: 5),
                       child: Column(
                         children: [
                           Text(
@@ -51,14 +50,15 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     //Kullanici ismi ve resmi bolumu
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Container(
-                      padding:
-                          const EdgeInsets.only(left: 32, right: 32, top: 10),
+                      padding: const EdgeInsets.only(
+                          left: 32, right: 32, top: 10),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
                         children: [
                           SizedBox(
                               height: 100,
@@ -69,12 +69,13 @@ class ProfilSayfasi extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             width: 16,
                           ),
                           Expanded(
                               child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.start,
                             children: [
                               Text(
                                 TurkceItemler().kullaniciAdi,
@@ -103,45 +104,50 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     //takipci, takip edilen bolumm
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Container(
-                      padding: EdgeInsets.all(32),
+                      padding: const EdgeInsets.all(32),
                       color: ColorsUtility().primaryColor,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             children: [
                               Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
                                 children: [
                                   Icon(
                                     Icons.person_pin_sharp,
-                                    color: ColorsUtility().backgroundColor,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     size: 35,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 3,
                                   ),
                                   Text(
                                     "105",
                                     style: TextStyle(
-                                        color: ColorsUtility().backgroundColor,
+                                        color: ColorsUtility()
+                                            .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Alegreya",
                                         fontSize: 20),
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 3,
                               ),
                               Text(
                                 TurkceItemler().takipciSayisi,
                                 style: TextStyle(
-                                    color: ColorsUtility().backgroundColor,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     fontWeight: FontWeight.w400,
                                     fontFamily: "Alegreya",
                                     fontSize: 14),
@@ -151,33 +157,37 @@ class ProfilSayfasi extends StatelessWidget {
                           Column(
                             children: [
                               Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
                                 children: [
                                   Icon(
                                     Icons.contacts_sharp,
-                                    color: ColorsUtility().backgroundColor,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     size: 33,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 3,
                                   ),
                                   Text(
                                     "86",
                                     style: TextStyle(
-                                        color: ColorsUtility().backgroundColor,
+                                        color: ColorsUtility()
+                                            .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Alegreya",
                                         fontSize: 20),
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 4,
                               ),
                               Text(
                                 TurkceItemler().takipEdilen,
                                 style: TextStyle(
-                                    color: ColorsUtility().backgroundColor,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     fontWeight: FontWeight.w400,
                                     fontFamily: "Alegreya",
                                     fontSize: 14),
@@ -187,33 +197,38 @@ class ProfilSayfasi extends StatelessWidget {
                           Column(
                             children: [
                               Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.center,
                                 children: [
                                   Icon(
-                                    Icons.collections_bookmark_outlined,
-                                    color: ColorsUtility().backgroundColor,
+                                    Icons
+                                        .collections_bookmark_outlined,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     size: 35,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 3,
                                   ),
                                   Text(
                                     "5",
                                     style: TextStyle(
-                                        color: ColorsUtility().backgroundColor,
+                                        color: ColorsUtility()
+                                            .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Alegreya",
                                         fontSize: 20),
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 3,
                               ),
                               Text(
                                 TurkceItemler().tarifDefterim,
                                 style: TextStyle(
-                                    color: ColorsUtility().backgroundColor,
+                                    color: ColorsUtility()
+                                        .backgroundColor,
                                     fontWeight: FontWeight.w400,
                                     fontFamily: "Alegreya",
                                     fontSize: 14),
@@ -224,11 +239,12 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     // takipcilerim
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 32, right: 32),
+                      padding:
+                          const EdgeInsets.only(left: 32, right: 32),
                       child: Column(
                         children: [
                           Text(
@@ -240,18 +256,20 @@ class ProfilSayfasi extends StatelessWidget {
                                 fontSize: 18),
                           ),
                           //takipcilerin listesi
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            width: MediaQuery.of(context).size.width - 64,
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width -
+                                64,
                             height: 80,
                             child: ListView.builder(
                               itemBuilder: (context, index) {
                                 return Container(
                                   width: 80,
                                   height: 80,
-                                  margin: EdgeInsets.only(right: 8),
+                                  margin:
+                                      const EdgeInsets.only(right: 8),
                                   child: ClipOval(
                                     child: Image.asset(
                                       "assets/${index + 1}.jpg",
@@ -269,11 +287,12 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     //tariflerim baslıgı
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 32, right: 32),
+                      padding:
+                          const EdgeInsets.only(left: 32, right: 32),
                       child: Column(
                         children: [
                           Text(
@@ -288,12 +307,12 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     //tariflerim bolumu
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Center(
                       child: Container(
-                        alignment: Alignment(0.0, -1.0),
+                        alignment: const Alignment(0.0, -1.0),
                         color: ColorsUtility().backgroundColor,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -328,11 +347,12 @@ class ProfilSayfasi extends StatelessWidget {
                       ),
                     ),
                     //Degerlendirmelerim bolumu
-                    SizedBox(
+                    const SizedBox(
                       height: 18,
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 32, right: 32),
+                      padding:
+                          const EdgeInsets.only(left: 32, right: 32),
                       child: Column(
                         children: [
                           Text(
@@ -343,22 +363,27 @@ class ProfilSayfasi extends StatelessWidget {
                                 fontFamily: "Alegreya",
                                 fontSize: 18),
                           ),
-                          Container(
-                            width: MediaQuery.of(context).size.width - 64,
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width -
+                                64,
                             child: ListView.builder(
                               itemBuilder: (context, index) {
                                 return Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.start,
                                   children: [
                                     Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                          MainAxisAlignment
+                                              .spaceBetween,
                                       children: [
                                         Text(
                                           "Takipçi $index",
                                           style: TextStyle(
-                                              color: ColorsUtility().thirdColor,
-                                              fontWeight: FontWeight.w600,
+                                              color: ColorsUtility()
+                                                  .thirdColor,
+                                              fontWeight:
+                                                  FontWeight.w600,
                                               fontFamily: "Alegreya",
                                               fontSize: 18),
                                         ),
@@ -366,24 +391,24 @@ class ProfilSayfasi extends StatelessWidget {
                                           children: [
                                             Icon(
                                               Icons.star_rounded,
-                                              color:
-                                                  ColorsUtility().degerlendirme,
+                                              color: ColorsUtility()
+                                                  .degerlendirme,
                                             ),
                                             Icon(
                                               Icons.star_rounded,
-                                              color:
-                                                  ColorsUtility().degerlendirme,
+                                              color: ColorsUtility()
+                                                  .degerlendirme,
                                             ),
                                             Icon(
                                               Icons.star_rounded,
-                                              color:
-                                                  ColorsUtility().degerlendirme,
+                                              color: ColorsUtility()
+                                                  .degerlendirme,
                                             ),
                                           ],
                                         ),
                                       ],
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 5,
                                     ),
                                     Text(
@@ -394,7 +419,7 @@ class ProfilSayfasi extends StatelessWidget {
                                           fontFamily: "Alegreya",
                                           fontSize: 14),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 5,
                                     ),
                                   ],
@@ -402,8 +427,8 @@ class ProfilSayfasi extends StatelessWidget {
                               },
                               itemCount: 3,
                               shrinkWrap: true,
-                              controller:
-                                  ScrollController(keepScrollOffset: false),
+                              controller: ScrollController(
+                                  keepScrollOffset: false),
                             ),
                           )
                         ],
