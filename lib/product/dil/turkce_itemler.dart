@@ -18,4 +18,8 @@ class TurkceItemler {
   final takipcilerim = "Takipçilerim";
   final degerlendirmelerim = "Değerlendirmelerim";
   final ara = "Ara";
+  final profilDuzenle = "Profili Düzenle";
+  final kullaniciEmail = "E-posta";
+  final hakkimda = "Hakkımda";
+  final webSitesi = "Web sitesi";
 }

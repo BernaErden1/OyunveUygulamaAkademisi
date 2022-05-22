@@ -13,7 +13,8 @@ class Anasayfa extends StatefulWidget {
 }
 
 class _AnasayfaState extends State<Anasayfa> {
-  TextEditingController _editingController = TextEditingController();
+  final TextEditingController _editingController =
+      TextEditingController();
   late final List<TarifDefteriModel> mockList;
   final List<String> items = [];
 
@@ -42,11 +43,11 @@ class _AnasayfaState extends State<Anasayfa> {
     dummySearchList.addAll(mockList.map((e) => e.title));
     if (query.isNotEmpty) {
       List<String> dummyListData = [];
-      dummySearchList.forEach((item) {
+      for (var item in dummySearchList) {
         if (item.contains(query)) {
           dummyListData.add(item);
         }
-      });
+      }
       setState(() {
         items.clear();
         items.addAll(dummyListData);
@@ -93,7 +94,7 @@ class _AnasayfaState extends State<Anasayfa> {
                     return ListTile(
                       title: Text(
                         items[index],
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                       ),
                     );
                   },
