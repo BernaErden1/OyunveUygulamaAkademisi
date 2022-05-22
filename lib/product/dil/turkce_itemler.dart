@@ -17,4 +17,5 @@ class TurkceItemler {
   final takipEdilen = "Takip Edilen";
   final takipcilerim = "Takipçilerim";
   final degerlendirmelerim = "Değerlendirmelerim";
+  final ara = "Ara";
 }

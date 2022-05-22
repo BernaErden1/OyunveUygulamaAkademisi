@@ -31,6 +31,7 @@ class _MainPageState extends State<MainPage>
           child: DefaultTabController(
               length: myTabItems.values.length,
               child: Scaffold(
+                resizeToAvoidBottomInset: false,
                 extendBody: true,
                 floatingActionButton: FloatingActionButton(
                   onPressed: () {},
