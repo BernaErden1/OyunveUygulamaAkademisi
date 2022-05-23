@@ -149,8 +149,8 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 - **Sprint Retrospective:**
 
 *Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
-*Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
 *Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
+*Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
 *İşler haftanın sonlarında değil daha çok başlarında neticelendirilmeye çalışılmalı.
 
 
