@@ -130,13 +130,16 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 - **Sprint Review**: 
 
-(?)
+*Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
+*3. sprint için firebase kısımlarına çalışılmalı
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
 
-(?)
+*Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
+*Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
+*Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
 
 
 
