@@ -125,14 +125,24 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 - **Ürün Durumu**: 
 
 Ürünün tasarım görüntüleri aşağıdadır:
+![1](https://user-images.githubusercontent.com/70723400/169896331-b67d4fa0-8161-4a86-b1fa-9f1ed6aba3df.png)
+![2](https://user-images.githubusercontent.com/70723400/169896338-f19b0f13-b00c-4ec5-9c80-07034572c135.png)
+![3](https://user-images.githubusercontent.com/70723400/169896347-da3a0fea-96ec-4b90-b2fb-f80c1456164b.png)
+![4](https://user-images.githubusercontent.com/70723400/169896355-19093c46-e42f-467e-a590-310c48037b0d.png)
+![5](https://user-images.githubusercontent.com/70723400/169896363-dd8a8c68-620e-4ec4-92ed-7a0518c4f3a7.png)
+![6](https://user-images.githubusercontent.com/70723400/169896369-43a54d11-eb30-472e-814c-98e223301270.png)
+![7](https://user-images.githubusercontent.com/70723400/169896409-600e4416-28e2-462a-bdc1-1b795bd96233.png)
+![8](https://user-images.githubusercontent.com/70723400/169896418-f2ee01fc-d2a5-4e0f-9488-405823b63a14.png)
+![9](https://user-images.githubusercontent.com/70723400/169896430-f51da93c-f0d7-47ee-ae9f-d49b81f048cb.png)
+![10](https://user-images.githubusercontent.com/70723400/169896435-aaa38e58-55c7-4a69-b1bd-88c1e68b85d1.png)
+![11](https://user-images.githubusercontent.com/70723400/169896441-fd5f496f-5920-4a57-aa9d-3aa0bd0901c1.png)
 
-(?)
 
 - **Sprint Review**: 
 
 *Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
 *3. sprint için firebase kısımlarına çalışılmalı.
-*Tasarım geliştirilmesi için beyin fırtınası yapılabilir.
+*Zaman planlamasına bağlı olarak tasarım geliştirilmesi için beyin fırtınası yapılabilir.
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
@@ -141,6 +151,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 *Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
 *Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
 *Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
+*İşler haftanın sonlarında değil daha çok başlarında neticelendirilmeye çalışılmalı.
 
 
 
