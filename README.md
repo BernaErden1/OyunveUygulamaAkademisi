@@ -131,7 +131,8 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 - **Sprint Review**: 
 
 *Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
-*3. sprint için firebase kısımlarına çalışılmalı
+*3. sprint için firebase kısımlarına çalışılmalı.
+*Tasarım geliştirilmesi için beyin fırtınası yapılabilir.
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
