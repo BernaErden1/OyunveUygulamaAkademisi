@@ -105,7 +105,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir. Bu sprintte ekran tasarımları kod tarafına geçirilmiş ve bunlar için 150 puanlık bir iş öngörülmüştür.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir. Bu sprintte ekran tasarımları kod tarafına geçirilmesi ve flutter içinde ekran tasarımlarının bitirilmesi gerektiğine karar verilmiştir. Bunlar için 150 puanlık bir iş öngörülmüştür.
 
 - **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir. İlk sprintte tasarlanan ekranların gerçek zamanlı halleri tamamlanmış olup kullanıcının ekranlarda yapmayı beklediği story ekranları yapılmıştır.
 
@@ -141,7 +141,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 - **Sprint Review**: 
 
 *Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
-*3. sprint için firebase kısımlarına çalışılmalı.
+*3. sprint için her ekip üyesi firebase kısımlarına çalışılmalı.
 *Zaman planlamasına bağlı olarak tasarım geliştirilmesi için beyin fırtınası yapılabilir.
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
@@ -151,7 +151,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 *Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
 *Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
 *Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
-*İşler haftanın sonlarında değil daha çok başlarında neticelendirilmeye çalışılmalı.
+*İşler haftanın sonlarına sıkıştırılmadan daha çok başlarında neticelendirilmeye çalışılmalı.
 
 
 
