@@ -97,24 +97,30 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 - **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
 *Figmadaki tasarımların kod tarafında görev dağılımı yapılmıştır.
-*Ana ekran, giriş ekranı, onboardingler, giriş sayfası, profil ve favoriler ekranlarının tasarımı flutter üzerinde yapılmıştır.
-*Zoom ve slack üzerinden toplantılar gerçekleştirilmiştir ve buralarda kod tarafında herkesin aynı noktaya gelmesi sağlanmıştır
-*
+*Ana ekran ve tarif ekranları tasarlandı
+*Giriş ekranı ve onboardingler yapışdı.
+*Profil ve favoriler ekranları yapıldı.
+*Kod içerisindeki hatalar ikili/üçlü toplantılar yapılarak giderildi.
+*Zoom ve slack üzerinden toplantılar gerçekleştirilmiştir ve buralarda kod tarafında herkesin aynı noktaya gelmesi sağlandı.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr. Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir. Bu sprintte ekran tasarımları kod tarafına geçirilmiş ve bunlar için 150 puanlık bir iş öngörülmüştür.
 
-- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir.
+- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir. İlk sprintte tasarlanan ekranların gerçek zamanlı halleri tamamlanmış olup kullanıcının ekranlarda yapmayı beklediği story ekranları yapılmıştır.
 
 - **Daily Scrum**: Daily Scrum toplantıları kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle daha çok Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. Sesli ve görüntülü olarak Zoom ve Slack üzerinden toplantılar gerçekleştirilmiştir.
 
-(?)
+[Daily Scrum2.docx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8756998/Daily.Scrum2.docx)
+
 
 - **Sprint board update**: 
 
-(?)
 
+![Sprint2 Backlog1](https://user-images.githubusercontent.com/70723400/169876578-4f5ef8c4-88c7-4372-bb20-b3b996053f48.JPG)
+![Sprint2 Backlog2](https://user-images.githubusercontent.com/70723400/169876590-98148cbe-2541-49b2-89e8-b4a4ffdab25c.JPG)
+![Sprint2 Backlog3](https://user-images.githubusercontent.com/70723400/169876595-6616ccb4-61f4-41dd-a4bf-215cbebf092f.JPG)
+![Sprint2 Backlog4](https://user-images.githubusercontent.com/70723400/169876601-bedeb636-6bcf-4926-adaf-3310d7a27912.JPG)
 
 - **Ürün Durumu**: 
 
