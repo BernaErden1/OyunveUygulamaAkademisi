@@ -19,45 +19,54 @@ class _MainPageState extends State<MainPage>
   void initState() {
     super.initState();
     _tabController =
-        TabController(length: myTabItems.values.length, vsync: this);
+        TabController(length: myTabItems.entries.length, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: myTabItems.values.length,
-        child: Scaffold(
-          extendBody: true,
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.add_outlined),
-          ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked,
-          bottomNavigationBar: BottomAppBar(
-            color: ColorsUtility().primaryColor,
-            notchMargin: 2,
-            shape: const CircularNotchedRectangle(),
-            child: TabBar(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              tabs: myTabItems.entries
-                  .map((e) => Tab(
-                        text: e.key,
-                        icon: e.value,
-                      ))
-                  .toList(),
-            ),
-          ),
-          body: TabBarView(
-            controller: _tabController,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const Anasayfa(),
-              const TarifDefteriSayfasi(),
-              const ProfilSayfasi(),
-              const ProfilAyarlarSayfasi()
-            ],
-          ),
-        ));
+    return Column(
+      children: [
+        Expanded(
+          flex: 1,
+          child: DefaultTabController(
+              length: myTabItems.values.length,
+              child: Scaffold(
+                resizeToAvoidBottomInset: false,
+                extendBody: true,
+                floatingActionButton: FloatingActionButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.add_outlined),
+                ),
+                floatingActionButtonLocation:
+                    FloatingActionButtonLocation.centerDocked,
+                bottomNavigationBar: BottomAppBar(
+                  color: ColorsUtility().primaryColor,
+                  notchMargin: 2,
+                  shape: const CircularNotchedRectangle(),
+                  child: TabBar(
+                    controller: _tabController,
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    tabs: myTabItems.entries
+                        .map((e) => Tab(
+                              text: e.key,
+                              icon: e.value,
+                            ))
+                        .toList(),
+                  ),
+                ),
+                body: TabBarView(
+                  controller: _tabController,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const Anasayfa(),
+                    const TarifDefteriSayfasi(),
+                    const ProfilSayfasi(),
+                     ProfilAyarlarSayfasi()
+                  ],
+                ),
+              )),
+        ),
+      ],
+    );
   }
 }
