@@ -1,22 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Ayarlar",
-      home:ProfilAyarlarSayfasi() ,
-    );
-  }
-}
 
 class ProfilAyarlarSayfasi extends StatefulWidget {
  @override
@@ -27,40 +14,10 @@ class _ProfilAyarlarSayfasi extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: ColorsUtility().primaryColor,
-        elevation: 1,
-        leading: IconButton(
-          icon: Icon(
-            Icons.navigate_before_outlined, color: ColorsUtility().thirdColor,
-          ),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.settings, color: ColorsUtility().thirdColor,
-            ),
-            onPressed: () {},
-          ),
-        ],
-      ),
-      body: Container(
-        padding: EdgeInsets.only(left: 16, top: 25, right: 16),
-        child: GestureDetector(
-          onTap:(){ FocusScope. of(context).unfocus;
-          },
-          child: ListView(
+            body:  Column(
             children: [
-              Text(
-                TurkceItemler().profilDuzenle,
-                style: TextStyle(
-                    color: ColorsUtility().thirdColor,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: "Alegreya",
-                    fontSize: 25),
-              ),
-              SizedBox(
+              BaslikBarMini(yazi: TurkceItemler().profilDuzenle),
+            SizedBox(
                 height: 15,
               ),
               Center(
@@ -78,7 +35,7 @@ class _ProfilAyarlarSayfasi extends State {
                           BoxShadow(
                             spreadRadius: 2, blurRadius: 10,
                             color: Colors.black.withOpacity(0.1),
-                            offset: Offset(0,10)
+                            offset: Offset(0,5)
                           )
                         ],
                         shape : BoxShape.circle,
@@ -107,52 +64,167 @@ class _ProfilAyarlarSayfasi extends State {
                 ],
               ),
               ),
-                          SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(bottom: 3),
-                    labelText: TurkceItemler().kullaniciAdi,
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: "Kullanıcı İsmi",
-                    hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
-                ),
-              ),
               SizedBox(
                 height: 20,
               ),
-              TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(bottom: 3),
-                    labelText: TurkceItemler().kullaniciEmail,
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: "tarifim@gmail.com",
-                    hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+              Container(
+                margin: EdgeInsets.only(top:10,bottom:15,right: 20,left: 20),
+                decoration: BoxDecoration(
+                  color: ColorsUtility().backgroundColor,
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 10,
+                      spreadRadius:5,
+                      offset: Offset(1,1),
+                      color: ColorsUtility().yazi.withOpacity(0.2)
+                    )
+                  ]
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide(
+                        color: ColorsUtility().backgroundColor
+                      )
+                    ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                      contentPadding: EdgeInsets.only(bottom: 3),
+                      labelText: TurkceItemler().kullaniciAdi,
+                      labelStyle: TextStyle (fontSize: 20, color:ColorsUtility().thirdColor),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: "   Kullanıcı İsmi",
+                      hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(bottom: 3),
-                    labelText: TurkceItemler().hakkimda,
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: "Uygulamayı üç aydır kullanıyorum ve oldukça faydasını...",
-                    hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+              Container(
+                margin: EdgeInsets.only(top:10,bottom: 15,right: 20,left: 20),
+                decoration: BoxDecoration(
+                    color: ColorsUtility().backgroundColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 10,
+                          spreadRadius:5,
+                          offset: Offset(1,1),
+                          color: ColorsUtility().yazi.withOpacity(0.2)
+                      )
+                    ]
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      ),
+                      contentPadding: EdgeInsets.only(bottom: 3),
+                      labelText: TurkceItemler().kullaniciEmail,
+                      labelStyle: TextStyle (fontSize: 20, color:ColorsUtility().thirdColor),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: "   tarifim@gmail.com",
+                      hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 20,
+              Container(
+                margin: EdgeInsets.only(top:10,bottom: 15,right: 20,left: 20),
+                decoration: BoxDecoration(
+                    color: ColorsUtility().backgroundColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 10,
+                          spreadRadius:5,
+                          offset: Offset(1,1),
+                          color: ColorsUtility().yazi.withOpacity(0.2)
+                      )
+                    ]
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      ),
+                      contentPadding: EdgeInsets.only(bottom: 3),
+                      labelText: TurkceItemler().hakkimda,
+                      labelStyle: TextStyle (fontSize: 20, color:ColorsUtility().thirdColor),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: "   Uygulamayı üç aydır kullanıyorum ve oldukça faydasını..",
+                      hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+                  ),
+                ),
               ),
-              TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(bottom: 3),
-                    labelText: TurkceItemler().webSitesi,
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    hintText: "oyunveuygulama.com",
-                    hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+              Container(
+                margin: EdgeInsets.only(top:10,bottom: 10,right: 20,left: 20),
+                decoration: BoxDecoration(
+                    color: ColorsUtility().backgroundColor,
+                    borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 10,
+                          spreadRadius:5,
+                          offset: Offset(1,1),
+                          color: ColorsUtility().yazi.withOpacity(0.2)
+                      )
+                    ]
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: ColorsUtility().backgroundColor
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      ),
+                      contentPadding: EdgeInsets.only(bottom: 3),
+                      labelText: TurkceItemler().webSitesi,
+                      labelStyle: TextStyle (fontSize: 20, color:ColorsUtility().thirdColor),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      hintText: "   oyunveuygulama.com",
+                      hintStyle: TextStyle (fontSize: 16, fontWeight: FontWeight.bold, color:ColorsUtility().yazi)
+                  ),
                 ),
               ),
               SizedBox(
@@ -176,9 +248,8 @@ class _ProfilAyarlarSayfasi extends State {
               )
             ],
           ),
-        ),
-      ),
-    );
+
+      );
   }
 }
 
