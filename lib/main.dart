@@ -11,6 +11,7 @@ import 'package:tarifim/onboarding/onboarding3.dart';
 
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
+import 'package:tarifim/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
       theme: LightTheme(context).lightTema,
       darkTheme: DarkTheme().darkTema,
 
+
       home: const Anasayfa(),
+
 
     );
   }
