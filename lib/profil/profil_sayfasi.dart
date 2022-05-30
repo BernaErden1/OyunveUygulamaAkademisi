@@ -1,5 +1,7 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/tarif_kartlari_data.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
@@ -22,6 +24,7 @@ class _ProfilSayfasi extends State {
             left: 20,
             right: 20,
           ),
+
           child: Column(
             children: [
               //Profilim yazısı
@@ -76,11 +79,13 @@ class _ProfilSayfasi extends State {
                       Text(
                         TurkceItemler().kullaniciAdi,
                         style: TextStyle(
+
                             color: ColorsUtility().thirdColor,
                             fontFamily: "Alegreya",
                             fontSize: 25,
                             fontWeight: FontWeight.w700),
                       ),
+
                       Text(
                         TurkceItemler().profilYazisi,
                         style: TextStyle(
@@ -180,6 +185,7 @@ class _ProfilSayfasi extends State {
                       children: [
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
+
                           children: [
                             Icon(
                               Icons.contacts_sharp,
@@ -238,6 +244,7 @@ class _ProfilSayfasi extends State {
                             )
                           ],
                         ),
+
                         SizedBox(
                           height: 3,
                         ),
@@ -358,6 +365,7 @@ class _ProfilSayfasi extends State {
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
+
                                       children: [
                                         Text(
                                           tarifKartlariListesi[index].title,
@@ -373,7 +381,9 @@ class _ProfilSayfasi extends State {
                                           tarifKartlariListesi[index].subtitle,
                                           style: TextStyle(
                                               color: ColorsUtility()
+
                                                   .backgroundColor,
+
                                               fontFamily: "Alegreya",
                                               fontSize: 15,
                                               fontWeight: FontWeight.w700),
@@ -383,6 +393,7 @@ class _ProfilSayfasi extends State {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.end,
                                           children: [
+
                                             Row(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
@@ -487,6 +498,7 @@ class _ProfilSayfasi extends State {
             ],
           ),
         ));
+
   }
 }
 

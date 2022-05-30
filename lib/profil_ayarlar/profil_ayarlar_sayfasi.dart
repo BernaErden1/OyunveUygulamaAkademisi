@@ -4,10 +4,12 @@ import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
+
 class ProfilAyarlarSayfasi extends StatefulWidget {
   @override
   _ProfilAyarlarSayfasi createState() => _ProfilAyarlarSayfasi();
 }
+
 
 class _ProfilAyarlarSayfasi extends State {
   bool showPassword = false;
@@ -22,6 +24,7 @@ class _ProfilAyarlarSayfasi extends State {
           borderRadius: BorderRadius.circular(20)),
     );
     return Scaffold(
+
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
         child: Column(
@@ -95,6 +98,7 @@ class _ProfilAyarlarSayfasi extends State {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   OutlinedButton(
+
                     child: Text("KAYDET",
                         style: TextStyle(
                             fontSize: 14,
@@ -102,6 +106,7 @@ class _ProfilAyarlarSayfasi extends State {
                             color: ColorsUtility().thirdColor)),
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
+
                       padding: EdgeInsets.symmetric(horizontal: 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -116,6 +121,7 @@ class _ProfilAyarlarSayfasi extends State {
                             color: ColorsUtility().backgroundColor)),
                     style: elevatedButtonStyle
                   )
+
                 ],
               ),
             )
