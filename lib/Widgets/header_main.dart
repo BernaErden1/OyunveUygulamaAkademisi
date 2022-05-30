@@ -67,7 +67,11 @@ class BaslikBar extends StatelessWidget {
             width: double.infinity,
             child: Text(
               'Mutfakta Neler Var?',
-              style: Theme.of(context).textTheme.headline4,
+              style: TextStyle(
+                  color: ColorsUtility().backgroundColor,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Yesteryear",
+                  fontSize: 40),
             ),
           ),
         ],
