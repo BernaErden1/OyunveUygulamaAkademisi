@@ -64,7 +64,7 @@ class BaslikBarMini extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.only(left: 15, top: 20),
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           height: 80,
           width: double.infinity,
           child: Text(
@@ -73,7 +73,7 @@ class BaslikBarMini extends StatelessWidget {
                 color: ColorsUtility().backgroundColor,
                 fontWeight: FontWeight.w600,
                 fontFamily: "PlusJakarta",
-                fontSize: 25),
+                fontSize: 23),
           ),
         ),
       ],
