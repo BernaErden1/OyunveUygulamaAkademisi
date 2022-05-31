@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/onboarding/onboarding2.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
@@ -59,10 +60,18 @@ class Onboarding1 extends StatelessWidget {
                           ),
                           Expanded(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.end,
                               children: [
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Onboarding2(),
+                                        ));
+                                  },
                                   icon: const Icon(
                                       Icons.navigate_next_outlined),
                                   iconSize: 60,
