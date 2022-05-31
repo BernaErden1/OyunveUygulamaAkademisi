@@ -1,7 +1,9 @@
 import 'dart:async';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tarifim/main_page.dart';
+import 'package:tarifim/onboarding/onboarding1.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,9 +12,17 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
+int? isviewed;
+
 class _SplashScreenState extends State<SplashScreen> {
   late Timer _timer;
   int _start = 2;
+
+  void shared() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    isviewed = prefs.getInt('onBoard');
+  }
 
   void startTimer() {
     const oneSec = Duration(seconds: 1);
@@ -25,7 +35,9 @@ class _SplashScreenState extends State<SplashScreen> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const MainPage()));
+                    builder: (context) => isviewed != 1
+                        ? const Onboarding1()
+                        : const MainPage()));
           });
         } else {
           setState(() {
@@ -39,6 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    shared();
     startTimer();
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/%C3%B6neriler/oneriler_sayfasi.dart';
 import 'package:tarifim/anasayfa/anasayfa.dart';
 import 'package:tarifim/product/utility.dart';
 import 'package:tarifim/profil/profil_sayfasi.dart';
@@ -61,7 +62,7 @@ class _MainPageState extends State<MainPage>
                     const Anasayfa(),
                     const TarifDefteriSayfasi(),
                     const ProfilSayfasi(),
-                     ProfilAyarlarSayfasi()
+                    const OnerilerSayfasi()
                   ],
                 ),
               )),

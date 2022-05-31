@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/onboarding/onboarding3.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
@@ -29,43 +30,59 @@ class Onboarding2 extends StatelessWidget {
                     height: _heighttwo,
                     color: ColorsUtility().primaryColor,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Column(
                         children: [
                           HeadText(
                             text: TurkceItemler().onboard2Headtext,
                           ),
-                          SubText(text: TurkceItemler().onboard2subtext),
+                          SubText(
+                              text: TurkceItemler().onboard2subtext),
                           spaceSize(),
                           Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment:
+                                MainAxisAlignment.spaceEvenly,
                             children: [
                               OnboardingDot(
-                                color: ColorsUtility().backgroundColor,
+                                color:
+                                    ColorsUtility().backgroundColor,
                               ),
                               OnboardingDot(
                                 color: ColorsUtility().thirdColor,
                               ),
                               OnboardingDot(
-                                color: ColorsUtility().backgroundColor,
+                                color:
+                                    ColorsUtility().backgroundColor,
                               ),
                             ],
                           ),
                           Expanded(
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
                               children: [
                                 IconButton(
-                                  onPressed: () {},
-                                  icon:
-                                      const Icon(Icons.navigate_before_outlined),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(
+                                      Icons.navigate_before_outlined),
                                   iconSize: 60,
                                   color: ColorsUtility().thirdColor,
                                 ),
                                 IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.navigate_next_outlined),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Onboarding3(),
+                                        ));
+                                  },
+                                  icon: const Icon(
+                                      Icons.navigate_next_outlined),
                                   iconSize: 60,
                                   color: ColorsUtility().thirdColor,
                                 ),
