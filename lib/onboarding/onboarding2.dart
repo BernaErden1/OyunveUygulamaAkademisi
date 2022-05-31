@@ -52,24 +52,25 @@ class Onboarding2 extends StatelessWidget {
                               ),
                             ],
                           ),
-                          spaceSize(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon:
-                                    const Icon(Icons.navigate_before_outlined),
-                                iconSize: 60,
-                                color: ColorsUtility().thirdColor,
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: const Icon(Icons.navigate_next_outlined),
-                                iconSize: 60,
-                                color: ColorsUtility().thirdColor,
-                              ),
-                            ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
+                                  onPressed: () {},
+                                  icon:
+                                      const Icon(Icons.navigate_before_outlined),
+                                  iconSize: 60,
+                                  color: ColorsUtility().thirdColor,
+                                ),
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.navigate_next_outlined),
+                                  iconSize: 60,
+                                  color: ColorsUtility().thirdColor,
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),

@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/utility.dart';
 
-class BaslikBarMini extends StatelessWidget {
+class BaslikBarMini2 extends StatelessWidget {
   final String yazi;
-  const BaslikBarMini({Key? key, required this.yazi}) : super(key: key);
+  const BaslikBarMini2({Key? key, required this.yazi}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class BaslikBarMini extends StatelessWidget {
             child: ClipPath(
               clipper: WavyClipper1(),
               child: Container(
-                height: 110,
+                height: 120,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [
@@ -32,7 +32,7 @@ class BaslikBarMini extends StatelessWidget {
             child: ClipPath(
               clipper: WavyClipper2(),
               child: Container(
-                height: 110,
+                height: 120,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [
@@ -49,7 +49,7 @@ class BaslikBarMini extends StatelessWidget {
             child: ClipPath(
               clipper: WavyClipper3(),
               child: Container(
-                height: 110,
+                height: 120,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [
@@ -64,15 +64,15 @@ class BaslikBarMini extends StatelessWidget {
             ),),
           Container(
             padding: EdgeInsets.only(left: 15, top: 20),
-            alignment: Alignment.centerLeft,
-            height: 80,
+            alignment: Alignment.center,
+            height: 70,
             width: double.infinity,
             child: Text(yazi,
               style: TextStyle(
                   color: ColorsUtility().backgroundColor,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: "PlusJakarta",
-                  fontSize: 25),
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Yesteryear",
+                  fontSize: 30),
             ),
           ),
         ],

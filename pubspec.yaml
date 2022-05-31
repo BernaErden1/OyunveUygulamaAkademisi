@@ -76,12 +76,15 @@ flutter:
     - family: Allegra
       fonts:
         - asset: assets/fonts/Alegreya.ttf
-    - family: Molle
-      fonts:
-        - asset: assets/fonts/Molle-italic.ttf
     - family: Yesteryear
       fonts:
         - asset: assets/fonts/Yesteryear.ttf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat.ttf
+    - family: PlusJakarta
+      fonts:
+        - asset: assets/fonts/PlusJakarta.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

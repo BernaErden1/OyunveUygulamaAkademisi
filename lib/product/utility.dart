@@ -31,8 +31,13 @@ class SubText extends StatelessWidget {
       text,
       textAlign: TextAlign.center,
       maxLines: 2,
-      style: Theme.of(context).textTheme.subtitle1,
-    );
+      style: TextStyle(
+            color: ColorsUtility()
+                .backgroundColor,
+            fontFamily: "Montserrat",
+            fontSize: 20,
+            fontWeight: FontWeight.w500)
+      );
   }
 }
 
@@ -49,7 +54,12 @@ class HeadText extends StatelessWidget {
       text,
       textAlign: TextAlign.center,
       maxLines: 1,
-      style: Theme.of(context).textTheme.headline4,
+        style: TextStyle(
+            color: ColorsUtility()
+                .backgroundColor,
+            fontFamily: "Montserrat",
+            fontSize: 30,
+            fontWeight: FontWeight.w500)
     );
   }
 }

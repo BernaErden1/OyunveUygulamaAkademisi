@@ -57,18 +57,19 @@ class Onboarding1 extends StatelessWidget {
                               ),
                             ],
                           ),
-                          spaceSize(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                    Icons.navigate_next_outlined),
-                                iconSize: 60,
-                                color: ColorsUtility().thirdColor,
-                              ),
-                            ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                      Icons.navigate_next_outlined),
+                                  iconSize: 60,
+                                  color: ColorsUtility().thirdColor,
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),
