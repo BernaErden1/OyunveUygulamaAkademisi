@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/Widgets/header_main.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
-import 'package:tarifim/Widgets/baslik_bar.dart';
 
 class GirisYap extends StatefulWidget {
   const GirisYap({Key? key}) : super(key: key);
@@ -27,18 +27,7 @@ class _GirisYapState extends State<GirisYap> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ClipPath(
-      child: Container(
-        alignment: Alignment.center,
-        height: 150,
-        width: double.infinity,
-        color: ColorsUtility().primaryColor,
-        child: Text(
-          'Mutfakta Neler Var?',
-          style: Theme.of(context).textTheme.headline4,
-        ),
-      ),
-    ),
+        BaslikBar(),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
@@ -81,7 +70,10 @@ class _GirisYapState extends State<GirisYap> {
         child: Text(
           "Hala kayıt olmadın mı ? Kayıt ol",
           style: TextStyle(
-              fontSize: 16, color: ColorsUtility().secondaryColor),
+              color: ColorsUtility().secondaryColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              fontSize: 15),
         ));
   }
 
@@ -91,7 +83,10 @@ class _GirisYapState extends State<GirisYap> {
         child: Text(
           "Hoşgeldiniz",
           style: TextStyle(
-              fontSize: 40, color: ColorsUtility().secondaryColor),
+              color: ColorsUtility().secondaryColor,
+              fontWeight: FontWeight.w300,
+              fontFamily: "Montserraat",
+              fontSize: 50),
         ));
   }
 
@@ -106,7 +101,10 @@ class _GirisYapState extends State<GirisYap> {
         label: Text(
           TurkceItemler().loginGoogle,
           style: TextStyle(
-              fontSize: 22, color: ColorsUtility().primaryColor),
+              color: ColorsUtility().primaryColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "PlusJakarta",
+              fontSize: 22),
         ));
   }
 
@@ -125,7 +123,11 @@ class _GirisYapState extends State<GirisYap> {
         onPressed: () {},
         child: Text(
           TurkceItemler().girisYap,
-          style: const TextStyle(fontSize: 30),
+          style: TextStyle(
+              color: ColorsUtility().backgroundColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              fontSize: 28),
         ));
   }
 
@@ -137,7 +139,11 @@ class _GirisYapState extends State<GirisYap> {
             onPressed: () {},
             child: Text(
               TurkceItemler().sifremiUnuttum,
-              style: TextStyle(color: ColorsUtility().primaryColor),
+              style: TextStyle(
+                  color: ColorsUtility().primaryColor,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Montserrat",
+                  fontSize: 15),
             ))
       ],
     );
@@ -152,8 +158,10 @@ class _GirisYapState extends State<GirisYap> {
         textInputAction: TextInputAction.done,
         cursorColor: ColorsUtility().thirdColor,
         style: TextStyle(
-          color: ColorsUtility().thirdColor,
-        ),
+            color: ColorsUtility().thirdColor,
+            fontWeight: FontWeight.w500,
+            fontFamily: "Montserrat",
+            fontSize: 20),
         decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderSide:
@@ -211,8 +219,10 @@ class _GirisYapState extends State<GirisYap> {
       textInputAction: TextInputAction.next,
       cursorColor: ColorsUtility().thirdColor,
       style: TextStyle(
-        color: ColorsUtility().thirdColor,
-      ),
+          color: ColorsUtility().thirdColor,
+          fontWeight: FontWeight.w500,
+          fontFamily: "Montserrat",
+          fontSize: 20),
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderSide:

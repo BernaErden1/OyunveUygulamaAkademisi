@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../Widgets/baslik_bar.dart';
+import '../Widgets/header_main.dart';
 import '../product/utility.dart';
 
 OutlineInputBorder _buildBorder(Color color) {
@@ -21,18 +20,7 @@ class ForgotPassword extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ClipPath(
-      child: Container(
-        alignment: Alignment.center,
-        height: 150,
-        width: double.infinity,
-        color: ColorsUtility().primaryColor,
-        child: Text(
-          'Mutfakta Neler Var?',
-          style: Theme.of(context).textTheme.headline4,
-        ),
-      ),
-    ),
+            BaslikBar(),
             const SizedBox(
               height: 150,
             ),
@@ -45,9 +33,10 @@ class ForgotPassword extends StatelessWidget {
                   Text(
                     content,
                     style: TextStyle(
-                        fontSize: 17,
                         color: ColorsUtility().primaryColor,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w700,
+                        fontFamily: "Montserrat",
+                        fontSize: 16),
                   ),
                   const SizedBox(
                     height: 30,
@@ -56,6 +45,11 @@ class ForgotPassword extends StatelessWidget {
                     decoration: InputDecoration(
                       prefixIcon: Image.asset('assets/mail.png'),
                       hintText: 'E-posta',
+                      hintStyle: TextStyle(
+                          color: Colors.black54,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Montserrat",
+                          fontSize: 18),
                       enabledBorder: _buildBorder(ColorsUtility().primaryColor),
                       disabledBorder:_buildBorder(ColorsUtility().primaryColor),
                       focusedBorder: _buildBorder(ColorsUtility().primaryColor),
@@ -65,7 +59,7 @@ class ForgotPassword extends StatelessWidget {
                   Row(mainAxisAlignment: MainAxisAlignment.end,children: [
                     
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: InkWell(
       child: CircleAvatar(
         radius: 25,

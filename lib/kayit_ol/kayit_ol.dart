@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
-import 'package:tarifim/Widgets/baslik_bar.dart';
+
+import '../Widgets/header_main.dart';
 
 class KayitOl extends StatefulWidget {
   const KayitOl({Key? key}) : super(key: key);
@@ -27,18 +28,7 @@ class _KayitOlState extends State<KayitOl> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ClipPath(
-      child: Container(
-        alignment: Alignment.center,
-        height: 150,
-        width: double.infinity,
-        color: ColorsUtility().primaryColor,
-        child: Text(
-          'Mutfakta Neler Var?',
-          style: Theme.of(context).textTheme.headline4,
-        ),
-      ),
-    ),
+            BaslikBar(),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
@@ -83,7 +73,10 @@ class _KayitOlState extends State<KayitOl> {
         child: Text(
           "Hoşgeldiniz",
           style: TextStyle(
-              fontSize: 40, color: ColorsUtility().secondaryColor),
+              color: ColorsUtility().secondaryColor,
+              fontWeight: FontWeight.w300,
+              fontFamily: "Montserraat",
+              fontSize: 50),
         ));
   }
 
@@ -98,7 +91,10 @@ class _KayitOlState extends State<KayitOl> {
         label: Text(
           TurkceItemler().loginGoogle,
           style: TextStyle(
-              fontSize: 22, color: ColorsUtility().primaryColor),
+              color: ColorsUtility().primaryColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "PlusJakarta",
+              fontSize: 22),
         ));
   }
 
@@ -117,7 +113,11 @@ class _KayitOlState extends State<KayitOl> {
         onPressed: () {},
         child: Text(
           TurkceItemler().kayitOl,
-          style: const TextStyle(fontSize: 30),
+          style: TextStyle(
+              color: ColorsUtility().backgroundColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              fontSize: 28),
         ));
   }
 
@@ -153,8 +153,10 @@ class _KayitOlState extends State<KayitOl> {
                     const BorderRadius.all(Radius.circular(20))),
             labelText: "Şifre",
             labelStyle: TextStyle(
-              color: ColorsUtility().thirdColor,
-            ),
+            color: ColorsUtility().thirdColor,
+        fontWeight: FontWeight.w500,
+        fontFamily: "Montserrat",
+        fontSize: 18),
             hintStyle: TextStyle(
               color: ColorsUtility().thirdColor,
             ),
@@ -191,8 +193,10 @@ class _KayitOlState extends State<KayitOl> {
       textInputAction: TextInputAction.next,
       cursorColor: ColorsUtility().thirdColor,
       style: TextStyle(
-        color: ColorsUtility().thirdColor,
-      ),
+          color: ColorsUtility().thirdColor,
+          fontWeight: FontWeight.w500,
+          fontFamily: "Montserrat",
+          fontSize: 18),
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderSide:
@@ -234,8 +238,10 @@ class _KayitOlState extends State<KayitOl> {
       textInputAction: TextInputAction.next,
       cursorColor: ColorsUtility().thirdColor,
       style: TextStyle(
-        color: ColorsUtility().thirdColor,
-      ),
+          color: ColorsUtility().thirdColor,
+          fontWeight: FontWeight.w500,
+          fontFamily: "Montserrat",
+          fontSize: 18),
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderSide:

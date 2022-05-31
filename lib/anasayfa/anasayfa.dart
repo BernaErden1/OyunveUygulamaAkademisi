@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/Widgets/mini_header2.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 
 import '../product/mock_data.dart';
@@ -64,11 +65,9 @@ class _AnasayfaState extends State<Anasayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(TurkceItemler().uygIsmi),
-      ),
-      body: Column(
+            body: Column(
         children: [
+          BaslikBarMini2(yazi: "Mutfakta Neler Var?"),
           spaceSize(),
           Padding(
             padding: PaddingDimen().horizaontalPadding,
@@ -94,7 +93,11 @@ class _AnasayfaState extends State<Anasayfa> {
                     return ListTile(
                       title: Text(
                         items[index],
-                        style: const TextStyle(color: Colors.black),
+                        style: TextStyle(
+                            color: Colors.black87,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: "Montserrat",
+                            fontSize: 18),
                       ),
                     );
                   },
@@ -120,8 +123,10 @@ class _AnasayfaState extends State<Anasayfa> {
       textInputAction: TextInputAction.done,
       cursorColor: ColorsUtility().thirdColor,
       style: TextStyle(
-        color: ColorsUtility().thirdColor,
-      ),
+          color: ColorsUtility().thirdColor,
+          fontWeight: FontWeight.w500,
+          fontFamily: "Montserrat",
+          fontSize: 18),
       decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderSide:
@@ -168,7 +173,11 @@ class _AnasayfaState extends State<Anasayfa> {
         onPressed: () {},
         child: Text(
           TurkceItemler().ara,
-          style: const TextStyle(fontSize: 20),
+          style: TextStyle(
+              color: ColorsUtility().backgroundColor,
+              fontWeight: FontWeight.w600,
+              fontFamily: "Montserrat",
+              fontSize: 20),
         ));
   }
 }

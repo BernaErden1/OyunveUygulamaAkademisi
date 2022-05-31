@@ -52,27 +52,30 @@ class Onboarding3 extends StatelessWidget {
                               ),
                             ],
                           ),
-                          spaceSize(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon:
-                                    const Icon(Icons.navigate_before_outlined),
-                                iconSize: 60,
-                                color: ColorsUtility().thirdColor,
-                              ),
-                              TextButton(
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
                                   onPressed: () {},
-                                  child: Text(
-                                    "Başlayalım",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline5!
-                                        .copyWith(color: Colors.white),
-                                  ))
-                            ],
+                                  icon:
+                                      const Icon(Icons.navigate_before_outlined),
+                                  iconSize: 60,
+                                  color: ColorsUtility().thirdColor,
+                                ),
+                                TextButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "Başlayalım",
+                                        style: TextStyle(
+                                            color: ColorsUtility()
+                                                .backgroundColor,
+                                            fontFamily: "Montserrat",
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.w500))
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),

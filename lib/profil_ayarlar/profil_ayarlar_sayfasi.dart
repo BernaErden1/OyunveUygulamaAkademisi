@@ -24,7 +24,6 @@ class _ProfilAyarlarSayfasi extends State {
           borderRadius: BorderRadius.circular(20)),
     );
     return Scaffold(
-
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
         child: Column(
@@ -101,6 +100,8 @@ class _ProfilAyarlarSayfasi extends State {
 
                     child: Text("KAYDET",
                         style: TextStyle(
+                        fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             letterSpacing: 2.2,
                             color: ColorsUtility().thirdColor)),
@@ -116,6 +117,8 @@ class _ProfilAyarlarSayfasi extends State {
                     onPressed: () {},
                     child: Text("ÇIKIŞ YAP",
                         style: TextStyle(
+                        fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             letterSpacing: 2.2,
                             color: ColorsUtility().backgroundColor)),
@@ -147,6 +150,10 @@ class _ProfilAyarlarSayfasi extends State {
                 color: ColorsUtility().yazi.withOpacity(0.2))
           ]),
       child: TextField(
+        style: TextStyle (
+          color: ColorsUtility().yazi,
+              fontFamily: "Montserrat"
+        ),
         obscureText: isPasswordTextField ? showPassword : false,
         decoration: InputDecoration(
             suffixIcon: isPasswordTextField
