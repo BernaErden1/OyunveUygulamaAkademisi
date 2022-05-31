@@ -110,12 +110,12 @@ class _ProfilSayfasi extends State {
                     //Takip edilen, Takipçi, Tariflerim kutusu
                     Container(
                       padding: EdgeInsets.only(
-                          top: 35, left: 30, right: 30),
+                          top: 18, left: 30, right: 30),
                       width: MediaQuery.of(context).size.width,
-                      height: 130,
+                      height: 90,
                       decoration: BoxDecoration(
                           color: ColorsUtility().primaryColor,
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           boxShadow: [
                             BoxShadow(
                               offset: Offset(5, 10),
@@ -138,7 +138,7 @@ class _ProfilSayfasi extends State {
                                     Icons.person_pin_sharp,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 35,
+                                    size: 30,
                                   ),
                                   SizedBox(
                                     width: 3,
@@ -150,7 +150,7 @@ class _ProfilSayfasi extends State {
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Montserrat",
-                                        fontSize: 20),
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
@@ -181,7 +181,7 @@ class _ProfilSayfasi extends State {
                                     Icons.contacts_sharp,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 33,
+                                    size: 30,
                                   ),
                                   SizedBox(
                                     width: 3,
@@ -193,7 +193,7 @@ class _ProfilSayfasi extends State {
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Montserrat",
-                                        fontSize: 20),
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
@@ -225,7 +225,7 @@ class _ProfilSayfasi extends State {
                                         .collections_bookmark_outlined,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 35,
+                                    size: 30,
                                   ),
                                   SizedBox(
                                     width: 3,
@@ -237,7 +237,7 @@ class _ProfilSayfasi extends State {
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
                                         fontFamily: "Montserrat",
-                                        fontSize: 20),
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
@@ -259,7 +259,7 @@ class _ProfilSayfasi extends State {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
                     //Takipçilerim başlığı
                     Row(children: [
@@ -269,12 +269,10 @@ class _ProfilSayfasi extends State {
                             color: ColorsUtility().thirdColor,
                             fontWeight: FontWeight.w700,
                             fontFamily: "Montserrat",
-                            fontSize: 18),
+                            fontSize: 16),
                       ),
                     ]),
-                    SizedBox(
-                      height: 15,
-                    ),
+
                     //Takipçilerim görüntüleme
                     Container(
                       width: MediaQuery.of(context).size.width,
@@ -283,8 +281,8 @@ class _ProfilSayfasi extends State {
                         itemBuilder: (context, index) {
                           return Row(children: [
                             Container(
-                              width: 70,
-                              height: 70,
+                              width: 50,
+                              height: 50,
                               margin: EdgeInsets.only(right: 8),
                               child: ClipOval(
                                 child: Image.asset(
@@ -295,13 +293,13 @@ class _ProfilSayfasi extends State {
                             )
                           ]);
                         },
-                        itemCount: 5,
+                        itemCount: 7,
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 5,
                     ),
                     //Tariflerim başlığı
                     Row(
@@ -315,9 +313,6 @@ class _ProfilSayfasi extends State {
                               fontSize: 30),
                         ),
                       ],
-                    ),
-                    SizedBox(
-                      height: 5,
                     ),
                     //Tariflerim liste görünümü
                     Expanded(
