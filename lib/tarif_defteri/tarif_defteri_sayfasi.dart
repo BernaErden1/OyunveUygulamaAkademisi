@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
+import 'package:tarifim/Widgets/mini_header2.dart';
 import 'package:tarifim/tarif_defteri/tarif_defteri_sayfasi_view_model.dart';
 import 'package:tarifim/tarif_detail/tarif_detail_page.dart';
 
@@ -39,37 +40,47 @@ class _TarifDefteriSayfasiState extends State<TarifDefteriSayfasi> {
   Widget build(BuildContext context) {
     final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
-        appBar: AppBar(
-          title: Text(TurkceItemler().tarifDefterim),
-        ),
-        body: Container(
-          padding: EdgeInsets.only(bottom: bottomPadding + 15),
-          child: ListView.separated(
-            padding: PaddingDimen().horizaontalPadding,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => TarifDetail(index: index),
-                  ));
+        body:
+        Column(
+          children: [
+            BaslikBarMini2(yazi: "Tariflerim"),
+            spaceSize(),
+            Expanded (
+              child: ListView.separated(
+                padding: PaddingDimen().horizaontalPadding,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TarifDetail(index: index),
+                      ));
+                    },
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage(mockList[index].image),
+                    ),
+                    title: Text(mockList[index].title,
+                        // ignore: prefer_const_constructors
+                      style: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: "Montserrat",
+                          fontSize: 18)),
+                    subtitle: Text(mockList[index].subtitle,
+                      style: TextStyle(
+                          color: Colors.black54 ,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: "Montserrat",
+                          fontSize: 13)),
+                    trailing: const Icon(Icons.navigate_next_outlined),
+                  );
                 },
-                leading: CircleAvatar(
-                  backgroundImage: AssetImage(mockList[index].image),
-                ),
-                title: Text(mockList[index].title,
-                    // ignore: prefer_const_constructors
-                    style: TextStyle(
-                      color: Colors.black,
-                    )),
-                subtitle: Text(mockList[index].subtitle),
-                trailing: const Icon(Icons.navigate_next_outlined),
-              );
-            },
-            separatorBuilder: (BuildContext context, int index) {
-              return Divider(color: ColorsUtility().thirdColor);
-            },
-            itemCount: mockList.length,
-          ),
+                separatorBuilder: (BuildContext context, int index) {
+                  return Divider(color: ColorsUtility().thirdColor);
+                },
+                itemCount: mockList.length,
+              ),
+            ),
+          ],
         ));
   }
 }

@@ -1,0 +1,41 @@
+[33mcommit f3fad02b998f55ee7243370cb874702c405648bf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mfirebase[m[33m)[m
+Merge: d3e0e7d 5d1c4fd
+Author: Enes Malik Kaptan <60131814+malikenes@users.noreply.github.com>
+Date:   Wed May 18 23:40:09 2022 +0300
+
+    Merge pull request #2 from BernaErden1/feat/bolumler
+    
+    onborading1 yapıldı
+
+[33mcommit 5d1c4fdf7b16accc8d494e8ad0a9b1d19e029ed0[m
+Author: Enes Malik Kaptan <kaptanenesmalik@gmail.com>
+Date:   Wed May 18 23:30:02 2022 +0300
+
+    onborading1 yapıldı
+
+[33mcommit d3e0e7d0cc716016bd547b3256dfd8055a142f36[m
+Merge: 6850561 2d961c4
+Author: Enes Malik Kaptan <60131814+malikenes@users.noreply.github.com>
+Date:   Wed May 18 20:54:29 2022 +0300
+
+    Merge pull request #1 from BernaErden1/feat/bolumler
+    
+    Feat/bolumler
+
+[33mcommit 2d961c483573bcfdaf9d2fa434bfe14b741591b4[m
+Author: Enes Malik Kaptan <kaptanenesmalik@gmail.com>
+Date:   Wed May 18 20:53:10 2022 +0300
+
+    geri kalan sayfalar oluşturuldu splash yapıldı tabbar yapıldı
+
+[33mcommit 0301902d4a6b5fc0ffb5e45b308e887f37d53c1e[m
+Author: Enes Malik Kaptan <kaptanenesmalik@gmail.com>
+Date:   Tue May 17 00:28:43 2022 +0300
+
+    Bölümler bölündü tasarıma mainPageden başlandı.
+
+[33mcommit 68505617976b8b4f97b07d9bb7530305315719d8[m[33m ([m[1;32mremote[m[33m)[m
+Author: Berna Erden <bernaErden4@gmail.com>
+Date:   Wed May 11 23:49:22 2022 +0300
+
+    İlk commit

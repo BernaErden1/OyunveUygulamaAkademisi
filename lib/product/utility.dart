@@ -15,7 +15,7 @@ Map<String, Icon> myTabItems = {
   "Anasayfa": const Icon(Icons.home_outlined),
   "Tarifler": const Icon(Icons.book_outlined),
   "Profil": const Icon(Icons.person_outlined),
-  "Ayarlar": const Icon(Icons.settings_outlined)
+  "Öneriler": const Icon(Icons.local_offer_outlined)
 };
 
 class SubText extends StatelessWidget {
@@ -27,12 +27,14 @@ class SubText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: TextAlign.center,
-      maxLines: 2,
-      style: Theme.of(context).textTheme.subtitle1,
-    );
+    return Text(text,
+        textAlign: TextAlign.center,
+        maxLines: 2,
+        style: TextStyle(
+            color: ColorsUtility().backgroundColor,
+            fontFamily: "Montserrat",
+            fontSize: 20,
+            fontWeight: FontWeight.w500));
   }
 }
 
@@ -45,12 +47,14 @@ class HeadText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: TextAlign.center,
-      maxLines: 1,
-      style: Theme.of(context).textTheme.headline4,
-    );
+    return Text(text,
+        textAlign: TextAlign.center,
+        maxLines: 1,
+        style: TextStyle(
+            color: ColorsUtility().backgroundColor,
+            fontFamily: "Montserrat",
+            fontSize: 30,
+            fontWeight: FontWeight.w500));
   }
 }
 

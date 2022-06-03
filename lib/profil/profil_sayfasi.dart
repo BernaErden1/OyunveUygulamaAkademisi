@@ -1,118 +1,132 @@
 import 'package:flutter/material.dart';
+import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
+import 'package:tarifim/product/tarif_kartlari_data.dart';
 import 'package:tarifim/product/utility.dart';
+import 'package:tarifim/profil_ayarlar/profil_ayarlar_sayfasi.dart';
 
-class ProfilSayfasi extends StatelessWidget {
+class ProfilSayfasi extends StatefulWidget {
   const ProfilSayfasi({Key? key}) : super(key: key);
 
   @override
+  _ProfilSayfasi createState() => _ProfilSayfasi();
+}
+
+class _ProfilSayfasi extends State {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
-        SizedBox.expand(
-          child: Image.asset(
-            "assets/onboarding1.png",
-            fit: BoxFit.cover,
-          ),
-        ),
-        DraggableScrollableSheet(
-          minChildSize: 0.1,
-          initialChildSize: 0.22,
-          builder: (context, scrollController) {
-            return SingleChildScrollView(
-              controller: scrollController,
+        backgroundColor: ColorsUtility().backgroundColor,
+        body: Column(
+          children: [
+            //Profilim yazısı
+            BaslikBarMini(yazi: TurkceItemler().profilim),
+            Expanded(
               child: Container(
-                constraints: BoxConstraints(
-                    minHeight: MediaQuery.of(context).size.height),
-                color: ColorsUtility().backgroundColor,
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.only(
+                  top: 5,
+                  left: 20,
+                  right: 20,
+                ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    //profilim yazisi
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 5),
-                      child: Column(
-                        children: [
-                          Text(
-                            TurkceItemler().profilim,
-                            style: TextStyle(
-                                color: ColorsUtility().thirdColor,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: "Alegreya",
-                                fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ),
-                    //Kullanici ismi ve resmi bolumu
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(
-                          left: 32, right: 32, top: 10),
-                      child: Row(
-                        mainAxisAlignment:
-                            MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                              height: 100,
-                              width: 100,
-                              child: ClipOval(
-                                child: Image.asset(
-                                  "assets/kullanici.jpg",
-                                  fit: BoxFit.cover,
+                    //Kullanıcı resmi ve Kullanıcı adı bölümü
+                    Row(
+                      children: [
+                        Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 4,
+                                  color:
+                                      ColorsUtility().backgroundColor,
                                 ),
-                              )),
-                          const SizedBox(
-                            width: 16,
-                          ),
-                          Expanded(
-                              child: Column(
-                            crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                TurkceItemler().kullaniciAdi,
-                                style: TextStyle(
-                                    color: ColorsUtility().thirdColor,
-                                    fontFamily: "Alegreya",
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              Text(
-                                TurkceItemler().profilYazisi,
-                                style: TextStyle(
-                                    color: ColorsUtility().thirdColor,
-                                    fontFamily: "Alegreya",
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                            ],
-                          )),
-                          Icon(
-                            Icons.person_pin,
+                                boxShadow: [
+                                  BoxShadow(
+                                      spreadRadius: 2,
+                                      blurRadius: 10,
+                                      color: Colors.black
+                                          .withOpacity(0.1),
+                                      offset: Offset(0, 5))
+                                ],
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/kullanici.jpg"),
+                                    fit: BoxFit.cover))),
+                        SizedBox(
+                          width: 13,
+                        ),
+                        Expanded(
+                            child: Column(
+                          crossAxisAlignment:
+                              CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              TurkceItemler().kullaniciAdi,
+                              style: TextStyle(
+                                  color: ColorsUtility().thirdColor,
+                                  fontFamily: "Montserrat",
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              TurkceItemler().profilYazisi,
+                              style: TextStyle(
+                                  color: ColorsUtility().thirdColor,
+                                  fontFamily: "Montserrat",
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                          ],
+                        )),
+                        Container(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: IconButton(
                             color: ColorsUtility().thirdColor,
-                            size: 45,
-                          )
-                        ],
-                      ),
+                            iconSize: 40,
+                            icon: const Icon(Icons.settings_outlined),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ProfilAyarlarSayfasi(),
+                                  ));
+                            },
+                          ),
+                        )
+                      ],
                     ),
-                    //takipci, takip edilen bolumm
                     const SizedBox(
-                      height: 16,
+                      height: 15,
                     ),
+                    //Takip edilen, Takipçi, Tariflerim kutusu
                     Container(
-                      padding: const EdgeInsets.all(32),
-                      color: ColorsUtility().primaryColor,
+                      padding: EdgeInsets.only(
+                          top: 18, left: 30, right: 30),
+                      width: MediaQuery.of(context).size.width,
+                      height: 90,
+                      decoration: BoxDecoration(
+                          color: ColorsUtility().primaryColor,
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(5, 10),
+                              blurRadius: 10,
+                              color: ColorsUtility()
+                                  .yazi
+                                  .withOpacity(0.2),
+                            )
+                          ]),
                       child: Row(
-                        mainAxisAlignment:
-                            MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Column(
                             children: [
@@ -124,9 +138,9 @@ class ProfilSayfasi extends StatelessWidget {
                                     Icons.person_pin_sharp,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 35,
+                                    size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -135,12 +149,12 @@ class ProfilSayfasi extends StatelessWidget {
                                         color: ColorsUtility()
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
-                                        fontFamily: "Alegreya",
-                                        fontSize: 20),
+                                        fontFamily: "Montserrat",
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 3,
                               ),
                               Text(
@@ -148,11 +162,14 @@ class ProfilSayfasi extends StatelessWidget {
                                 style: TextStyle(
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Alegreya",
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Montserrat",
                                     fontSize: 14),
                               )
                             ],
+                          ),
+                          SizedBox(
+                            width: 30,
                           ),
                           Column(
                             children: [
@@ -164,9 +181,9 @@ class ProfilSayfasi extends StatelessWidget {
                                     Icons.contacts_sharp,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 33,
+                                    size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -175,12 +192,12 @@ class ProfilSayfasi extends StatelessWidget {
                                         color: ColorsUtility()
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
-                                        fontFamily: "Alegreya",
-                                        fontSize: 20),
+                                        fontFamily: "Montserrat",
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 4,
                               ),
                               Text(
@@ -188,11 +205,14 @@ class ProfilSayfasi extends StatelessWidget {
                                 style: TextStyle(
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Alegreya",
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Montserrat",
                                     fontSize: 14),
                               )
                             ],
+                          ),
+                          SizedBox(
+                            width: 30,
                           ),
                           Column(
                             children: [
@@ -205,9 +225,9 @@ class ProfilSayfasi extends StatelessWidget {
                                         .collections_bookmark_outlined,
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    size: 35,
+                                    size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -216,12 +236,12 @@ class ProfilSayfasi extends StatelessWidget {
                                         color: ColorsUtility()
                                             .backgroundColor,
                                         fontWeight: FontWeight.w700,
-                                        fontFamily: "Alegreya",
-                                        fontSize: 20),
+                                        fontFamily: "Montserrat",
+                                        fontSize: 18),
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 3,
                               ),
                               Text(
@@ -229,8 +249,8 @@ class ProfilSayfasi extends StatelessWidget {
                                 style: TextStyle(
                                     color: ColorsUtility()
                                         .backgroundColor,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Alegreya",
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Montserrat",
                                     fontSize: 14),
                               )
                             ],
@@ -238,209 +258,288 @@ class ProfilSayfasi extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // takipcilerim
-                    const SizedBox(
-                      height: 16,
+                    SizedBox(
+                      height: 15,
                     ),
-                    Container(
-                      padding:
-                          const EdgeInsets.only(left: 32, right: 32),
-                      child: Column(
-                        children: [
-                          Text(
-                            TurkceItemler().takipcilerim,
-                            style: TextStyle(
-                                color: ColorsUtility().thirdColor,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: "Alegreya",
-                                fontSize: 18),
-                          ),
-                          //takipcilerin listesi
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width -
-                                64,
-                            height: 80,
-                            child: ListView.builder(
-                              itemBuilder: (context, index) {
-                                return Container(
-                                  width: 80,
-                                  height: 80,
-                                  margin:
-                                      const EdgeInsets.only(right: 8),
-                                  child: ClipOval(
-                                    child: Image.asset(
-                                      "assets/${index + 1}.jpg",
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                );
-                              },
-                              itemCount: 5,
-                              scrollDirection: Axis.horizontal,
-                              shrinkWrap: true,
-                            ),
-                          )
-                        ],
+                    //Takipçilerim başlığı
+                    Row(children: [
+                      Text(
+                        TurkceItemler().takipcilerim,
+                        style: TextStyle(
+                            color: ColorsUtility().thirdColor,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: "Montserrat",
+                            fontSize: 16),
                       ),
-                    ),
-                    //tariflerim baslıgı
-                    const SizedBox(
-                      height: 16,
-                    ),
+                    ]),
+
+                    //Takipçilerim görüntüleme
                     Container(
-                      padding:
-                          const EdgeInsets.only(left: 32, right: 32),
-                      child: Column(
-                        children: [
-                          Text(
-                            TurkceItemler().tarifDefterim,
-                            style: TextStyle(
-                                color: ColorsUtility().thirdColor,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: "Alegreya",
-                                fontSize: 18),
-                          ),
-                        ],
-                      ),
-                    ),
-                    //tariflerim bolumu
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Center(
-                      child: Container(
-                        alignment: const Alignment(0.0, -1.0),
-                        color: ColorsUtility().backgroundColor,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/steak.jpeg",
-                              fit: BoxFit.cover,
-                            ),
-                            Text(
-                              'Muhteşem Steak',
-                              style: TextStyle(
-                                  color: ColorsUtility().thirdColor,
-                                  fontFamily: "Alegreya",
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                            Text(
-                              'Detaylı anlatımı ile lezzet garantili steak tarifi.',
-                              style: TextStyle(
-                                  color: ColorsUtility().yazi,
-                                  fontFamily: "Alegreya",
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700),
-                            ),
-                            Icon(
-                              Icons.bookmarks,
-                              color: ColorsUtility().thirdColor,
-                              size: 25,
+                      width: MediaQuery.of(context).size.width,
+                      height: 70,
+                      child: ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Row(children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              margin: EdgeInsets.only(right: 8),
+                              child: ClipOval(
+                                child: Image.asset(
+                                  "assets/${index + 1}.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
                             )
-                          ],
+                          ]);
+                        },
+                        itemCount: 7,
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    //Tariflerim başlığı
+                    Row(
+                      children: [
+                        Text(
+                          TurkceItemler().tarifDefterim,
+                          style: TextStyle(
+                              color: ColorsUtility().thirdColor,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: "Yesteryear",
+                              fontSize: 30),
                         ),
-                      ),
+                      ],
                     ),
-                    //Degerlendirmelerim bolumu
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    Container(
-                      padding:
-                          const EdgeInsets.only(left: 32, right: 32),
-                      child: Column(
-                        children: [
-                          Text(
-                            TurkceItemler().degerlendirmelerim,
-                            style: TextStyle(
-                                color: ColorsUtility().thirdColor,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: "Alegreya",
-                                fontSize: 18),
-                          ),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width -
-                                64,
-                            child: ListView.builder(
-                              itemBuilder: (context, index) {
-                                return Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment
-                                              .spaceBetween,
-                                      children: [
-                                        Text(
-                                          "Takipçi $index",
-                                          style: TextStyle(
-                                              color: ColorsUtility()
-                                                  .thirdColor,
-                                              fontWeight:
-                                                  FontWeight.w600,
-                                              fontFamily: "Alegreya",
-                                              fontSize: 18),
-                                        ),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.star_rounded,
-                                              color: ColorsUtility()
-                                                  .degerlendirme,
+                    //Tariflerim liste görünümü
+                    Expanded(
+                        child: OverflowBox(
+                            maxWidth:
+                                MediaQuery.of(context).size.width,
+                            child: MediaQuery.removePadding(
+                              removeTop: true,
+                              context: context,
+                              child: ListView.builder(
+                                itemCount:
+                                    tarifKartlariListesi.length,
+                                shrinkWrap: true,
+                                itemBuilder: (context, index) {
+                                  return Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                            left: 20,
+                                            right: 20,
+                                            top: 25,
+                                            bottom: 15),
+                                        width: (MediaQuery.of(context)
+                                                .size
+                                                .width -
+                                            30),
+                                        height: 200,
+                                        margin: EdgeInsets.all(15),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(
+                                                    20),
+                                            image: DecorationImage(
+                                              colorFilter:
+                                                  ColorFilter.mode(
+                                                Colors.black
+                                                    .withOpacity(
+                                                        0.30),
+                                                BlendMode.multiply,
+                                              ),
+                                              image: AssetImage(
+                                                  tarifKartlariListesi[
+                                                          index]
+                                                      .image),
+                                              fit: BoxFit.cover,
                                             ),
-                                            Icon(
-                                              Icons.star_rounded,
-                                              color: ColorsUtility()
-                                                  .degerlendirme,
-                                            ),
-                                            Icon(
-                                              Icons.star_rounded,
-                                              color: ColorsUtility()
-                                                  .degerlendirme,
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Harika bir tarif! Hızlı ve kolay bir şekilde hazırladım.",
-                                      style: TextStyle(
-                                          color: ColorsUtility().yazi,
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: "Alegreya",
-                                          fontSize: 14),
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                  ],
-                                );
-                              },
-                              itemCount: 3,
-                              shrinkWrap: true,
-                              controller: ScrollController(
-                                  keepScrollOffset: false),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
+                                            boxShadow: [
+                                              BoxShadow(
+                                                offset: Offset(5, 10),
+                                                blurRadius: 10,
+                                                color: ColorsUtility()
+                                                    .yazi
+                                                    .withOpacity(0.2),
+                                              )
+                                            ]),
+                                        child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment
+                                                    .center,
+                                            children: [
+                                              Text(
+                                                tarifKartlariListesi[
+                                                        index]
+                                                    .title,
+                                                style: TextStyle(
+                                                    color: ColorsUtility()
+                                                        .backgroundColor,
+                                                    fontFamily:
+                                                        "Alegreya",
+                                                    fontSize: 25,
+                                                    fontWeight:
+                                                        FontWeight
+                                                            .w700),
+                                              ),
+                                              SizedBox(height: 35),
+                                              Text(
+                                                tarifKartlariListesi[
+                                                        index]
+                                                    .subtitle,
+                                                style: TextStyle(
+                                                    color: ColorsUtility()
+                                                        .backgroundColor,
+                                                    fontFamily:
+                                                        "Alegreya",
+                                                    fontSize: 15,
+                                                    fontWeight:
+                                                        FontWeight
+                                                            .w700),
+                                              ),
+                                              SizedBox(height: 35),
+                                              Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment
+                                                        .end,
+                                                children: [
+                                                  Row(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .end,
+                                                    children: [
+                                                      Container(
+                                                          width: 40,
+                                                          height: 40,
+                                                          decoration: BoxDecoration(
+                                                              border: Border.all(
+                                                                width:
+                                                                    2,
+                                                                color: Colors
+                                                                    .white
+                                                                    .withOpacity(0.4),
+                                                              ),
+                                                              boxShadow: [
+                                                                BoxShadow(
+                                                                    spreadRadius: 2,
+                                                                    blurRadius: 10,
+                                                                    color: Colors.black.withOpacity(0.1),
+                                                                    offset: Offset(0, 10))
+                                                              ],
+                                                              shape: BoxShape.circle,
+                                                              image: DecorationImage(image: AssetImage("assets/kullanici.jpg"), fit: BoxFit.cover))),
+                                                      SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      Container(
+                                                        padding: EdgeInsets
+                                                            .only(
+                                                                left:
+                                                                    5,
+                                                                right:
+                                                                    5),
+                                                        decoration: BoxDecoration(
+                                                            color: Colors
+                                                                .white
+                                                                .withOpacity(
+                                                                    0.4),
+                                                            borderRadius:
+                                                                BorderRadius.circular(
+                                                                    15),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                offset: Offset(
+                                                                    5,
+                                                                    10),
+                                                                blurRadius:
+                                                                    10,
+                                                                color: ColorsUtility()
+                                                                    .yazi
+                                                                    .withOpacity(0.2),
+                                                              )
+                                                            ]),
+                                                        child: Text(
+                                                          TurkceItemler()
+                                                              .kullaniciAdi,
+                                                          style: TextStyle(
+                                                              color: ColorsUtility()
+                                                                  .backgroundColor,
+                                                              fontFamily:
+                                                                  "Alegreya",
+                                                              fontSize:
+                                                                  15,
+                                                              fontWeight:
+                                                                  FontWeight.w400),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Expanded(
+                                                      child:
+                                                          Container()),
+                                                  Container(
+                                                    padding: EdgeInsets
+                                                        .only(
+                                                            left: 5,
+                                                            right: 5),
+                                                    decoration:
+                                                        BoxDecoration(
+                                                      color: Colors
+                                                          .white
+                                                          .withOpacity(
+                                                              0.4),
+                                                      borderRadius:
+                                                          BorderRadius
+                                                              .circular(
+                                                                  15),
+                                                    ),
+                                                    child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons
+                                                                .schedule,
+                                                            color: ColorsUtility()
+                                                                .thirdColor,
+                                                            size: 18,
+                                                          ),
+                                                          SizedBox(
+                                                              width:
+                                                                  7),
+                                                          Text(
+                                                            tarifKartlariListesi[
+                                                                    index]
+                                                                .time,
+                                                            style: TextStyle(
+                                                                color: ColorsUtility()
+                                                                    .backgroundColor,
+                                                                fontFamily:
+                                                                    "Alegreya",
+                                                                fontSize:
+                                                                    15,
+                                                                fontWeight:
+                                                                    FontWeight.w400),
+                                                          ),
+                                                        ]),
+                                                  ),
+                                                ],
+                                              )
+                                            ]),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              ),
+                            )))
                   ],
                 ),
               ),
-            );
-          },
-        )
-      ],
-    ));
+            ),
+          ],
+        ));
   }
 }

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "505044033557",
+    "project_id": "tarifim-5bab9",
+    "storage_bucket": "tarifim-5bab9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505044033557:android:cfe398c6ccba2fba8f2e1c",
+        "android_client_info": {
+          "package_name": "com.takim98.tarifim.tarifim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505044033557-okv0fhakto2agrqe25ij4hjtt5io5uda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCabdEqQHjPY4tC1xhB-IsJ7o194VQBjI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505044033557-okv0fhakto2agrqe25ij4hjtt5io5uda.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "505044033557-u0ga0ero1ocfvsb4jeh5oj4snbn67v9f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.takim98.tarifim.tarifim"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

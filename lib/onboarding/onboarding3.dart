@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
+import 'package:tarifim/splash/splash_screen.dart';
 
-class Onboarding3 extends StatelessWidget {
+class Onboarding3 extends StatefulWidget {
   const Onboarding3({Key? key}) : super(key: key);
+
+  @override
+  State<Onboarding3> createState() => _Onboarding3State();
+}
+
+class _Onboarding3State extends State<Onboarding3> {
+  _storeOnboardInfo() async {
+    int isViewed = 1;
+    print("Shared pref called");
+    print(isViewed);
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('onBoard', isViewed);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,50 +45,70 @@ class Onboarding3 extends StatelessWidget {
                     height: _heighttwo,
                     color: ColorsUtility().primaryColor,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Column(
                         children: [
                           HeadText(
                             text: TurkceItemler().onboard3Headtext,
                           ),
-                          SubText(text: TurkceItemler().onboard3subtext),
+                          SubText(
+                              text: TurkceItemler().onboard3subtext),
                           spaceSize(),
                           Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment:
+                                MainAxisAlignment.spaceEvenly,
                             children: [
                               OnboardingDot(
-                                color: ColorsUtility().backgroundColor,
+                                color:
+                                    ColorsUtility().backgroundColor,
                               ),
                               OnboardingDot(
-                                color: ColorsUtility().backgroundColor,
+                                color:
+                                    ColorsUtility().backgroundColor,
                               ),
                               OnboardingDot(
                                 color: ColorsUtility().thirdColor,
                               ),
                             ],
                           ),
-                          spaceSize(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon:
-                                    const Icon(Icons.navigate_before_outlined),
-                                iconSize: 60,
-                                color: ColorsUtility().thirdColor,
-                              ),
-                              TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Başlayalım",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline5!
-                                        .copyWith(color: Colors.white),
-                                  ))
-                            ],
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(
+                                      Icons.navigate_before_outlined),
+                                  iconSize: 60,
+                                  color: ColorsUtility().thirdColor,
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        _storeOnboardInfo();
+                                        Navigator.pushAndRemoveUntil(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const MainPage()),
+                                            (route) => false);
+                                      });
+                                    },
+                                    child: Text("Başlayalım",
+                                        style: TextStyle(
+                                            color: ColorsUtility()
+                                                .backgroundColor,
+                                            fontFamily: "Montserrat",
+                                            fontSize: 22,
+                                            fontWeight:
+                                                FontWeight.w500)))
+                              ],
+                            ),
                           )
                         ],
                       ),
