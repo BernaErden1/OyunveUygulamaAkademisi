@@ -61,7 +61,7 @@ class _MainPageState extends State<MainPage>
                   children: [
                     const Anasayfa(),
                     const TarifDefteriSayfasi(),
-                    const ProfilSayfasi(),
+                     ProfilSayfasi(),
                     const OnerilerSayfasi()
                   ],
                 ),

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/header_main.dart';
+import 'package:tarifim/auth_controller.dart';
+import 'package:tarifim/kayit_ol/kayit_ol.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
+
+import 'package:tarifim/sifremi_unuttum/sifremi_unuttum.dart';
 
 class GirisYap extends StatefulWidget {
   const GirisYap({Key? key}) : super(key: key);
@@ -18,16 +22,17 @@ class _GirisYapState extends State<GirisYap> {
       _isSecure = !_isSecure;
     });
   }
-
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
   final GlobalKey<FormState> _globalKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+
       body: SingleChildScrollView(
         child: Column(
           children: [
-        BaslikBar(),
+            BaslikBar(),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
@@ -39,9 +44,108 @@ class _GirisYapState extends State<GirisYap> {
                   child: Column(
                     children: [
                       spaceSize(size: 60),
-                      _emailTextField(),
+                  TextFormField(
+                    controller: emailController,
+                    validator: MyFormFieldValidator().isNotEmpy,
+                    keyboardType: TextInputType.emailAddress,
+                    autofillHints: const [AutofillHints.email],
+                    textInputAction: TextInputAction.next,
+                    cursorColor: ColorsUtility().thirdColor,
+                    style: TextStyle(
+                        color: ColorsUtility().thirdColor,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Montserrat",
+                        fontSize: 20),
+                    decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderSide:
+                            BorderSide(color: ColorsUtility().thirdColor),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                        enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: ColorsUtility().primaryColor,
+                            ),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                        border: OutlineInputBorder(
+                            borderSide:
+                            BorderSide(color: ColorsUtility().thirdColor),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(20))),
+                        labelText: "Email",
+                        labelStyle: TextStyle(
+                          color: ColorsUtility().thirdColor,
+                        ),
+                        hintStyle: TextStyle(
+                          color: ColorsUtility().thirdColor,
+                        ),
+                        prefixIcon: Icon(
+                          Icons.email_outlined,
+                          color: ColorsUtility().thirdColor,
+                        )),
+                  ),
                       spaceSize(),
-                      _passTextield(),
+                  TextFormField(
+                    controller: passwordController,
+                      obscureText: _isSecure,
+                      validator: MyFormFieldValidator().isNotEmpy,
+                      keyboardType: TextInputType.visiblePassword,
+                      autofillHints: const [AutofillHints.password],
+                      textInputAction: TextInputAction.done,
+                      cursorColor: ColorsUtility().thirdColor,
+                      style: TextStyle(
+                          color: ColorsUtility().thirdColor,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Montserrat",
+                          fontSize: 20),
+                      decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderSide:
+                              BorderSide(color: ColorsUtility().thirdColor),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: ColorsUtility().primaryColor,
+                              ),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                          border: OutlineInputBorder(
+                              borderSide:
+                              BorderSide(color: ColorsUtility().thirdColor),
+                              borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                          labelText: "Şifre",
+                          labelStyle: TextStyle(
+                            color: ColorsUtility().thirdColor,
+                          ),
+                          hintStyle: TextStyle(
+                            color: ColorsUtility().thirdColor,
+                          ),
+                          prefixIcon: _isSecure
+                              ? Icon(
+                            Icons.lock_outlined,
+                            color: ColorsUtility().thirdColor,
+                          )
+                              : Icon(
+                            Icons.lock_open_outlined,
+                            color: ColorsUtility().thirdColor,
+                          ),
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                _changeSecure();
+                              },
+                              icon: AnimatedCrossFade(
+                                firstChild: const Icon(Icons.visibility_outlined),
+                                secondChild:
+                                const Icon(Icons.visibility_off_outlined),
+                                crossFadeState: _isSecure
+                                    ? CrossFadeState.showFirst
+                                    : CrossFadeState.showSecond,
+                                duration: const Duration(seconds: 1),
+                              ),
+                              color: ColorsUtility().thirdColor))),
                       _sifreUnutButton(),
                       spaceSize(),
                       _girisYapButton(),
@@ -66,7 +170,9 @@ class _GirisYapState extends State<GirisYap> {
 
   TextButton _logIn() {
     return TextButton(
-        onPressed: () {},
+        onPressed: () {
+          _navigateToKayitOl(context);
+        },
         child: Text(
           "Hala kayıt olmadın mı ? Kayıt ol",
           style: TextStyle(
@@ -112,7 +218,7 @@ class _GirisYapState extends State<GirisYap> {
     return ElevatedButton(
         style: ButtonStyle(
             fixedSize:
-                MaterialStateProperty.all<Size>(const Size(200, 50)),
+            MaterialStateProperty.all<Size>(const Size(200, 50)),
             backgroundColor: MaterialStateProperty.all<Color>(
                 ColorsUtility().primaryColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -120,7 +226,9 @@ class _GirisYapState extends State<GirisYap> {
                     borderRadius: BorderRadius.circular(20),
                     side: BorderSide(
                         color: ColorsUtility().thirdColor)))),
-        onPressed: () {},
+        onPressed: () {
+          AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
+        },
         child: Text(
           TurkceItemler().girisYap,
           style: TextStyle(
@@ -136,7 +244,9 @@ class _GirisYapState extends State<GirisYap> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              _navigateToForgotPassword(context);
+            },
             child: Text(
               TurkceItemler().sifremiUnuttum,
               style: TextStyle(
@@ -149,108 +259,13 @@ class _GirisYapState extends State<GirisYap> {
     );
   }
 
-  TextFormField _passTextield() {
-    return TextFormField(
-        obscureText: _isSecure,
-        validator: MyFormFieldValidator().isNotEmpy,
-        keyboardType: TextInputType.visiblePassword,
-        autofillHints: const [AutofillHints.password],
-        textInputAction: TextInputAction.done,
-        cursorColor: ColorsUtility().thirdColor,
-        style: TextStyle(
-            color: ColorsUtility().thirdColor,
-            fontWeight: FontWeight.w500,
-            fontFamily: "Montserrat",
-            fontSize: 20),
-        decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: ColorsUtility().thirdColor),
-                borderRadius:
-                    const BorderRadius.all(Radius.circular(20))),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: ColorsUtility().primaryColor,
-                ),
-                borderRadius:
-                    const BorderRadius.all(Radius.circular(20))),
-            border: OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: ColorsUtility().thirdColor),
-                borderRadius:
-                    const BorderRadius.all(Radius.circular(20))),
-            labelText: "Şifre",
-            labelStyle: TextStyle(
-              color: ColorsUtility().thirdColor,
-            ),
-            hintStyle: TextStyle(
-              color: ColorsUtility().thirdColor,
-            ),
-            prefixIcon: _isSecure
-                ? Icon(
-                    Icons.lock_outlined,
-                    color: ColorsUtility().thirdColor,
-                  )
-                : Icon(
-                    Icons.lock_open_outlined,
-                    color: ColorsUtility().thirdColor,
-                  ),
-            suffixIcon: IconButton(
-                onPressed: () {
-                  _changeSecure();
-                },
-                icon: AnimatedCrossFade(
-                  firstChild: const Icon(Icons.visibility_outlined),
-                  secondChild:
-                      const Icon(Icons.visibility_off_outlined),
-                  crossFadeState: _isSecure
-                      ? CrossFadeState.showFirst
-                      : CrossFadeState.showSecond,
-                  duration: const Duration(seconds: 1),
-                ),
-                color: ColorsUtility().thirdColor)));
+
+
+  void _navigateToKayitOl(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => KayitOl()));
   }
 
-  TextFormField _emailTextField() {
-    return TextFormField(
-      validator: MyFormFieldValidator().isNotEmpy,
-      keyboardType: TextInputType.emailAddress,
-      autofillHints: const [AutofillHints.email],
-      textInputAction: TextInputAction.next,
-      cursorColor: ColorsUtility().thirdColor,
-      style: TextStyle(
-          color: ColorsUtility().thirdColor,
-          fontWeight: FontWeight.w500,
-          fontFamily: "Montserrat",
-          fontSize: 20),
-      decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-              borderSide:
-                  BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: ColorsUtility().primaryColor,
-              ),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
-          border: OutlineInputBorder(
-              borderSide:
-                  BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
-          labelText: "Email",
-          labelStyle: TextStyle(
-            color: ColorsUtility().thirdColor,
-          ),
-          hintStyle: TextStyle(
-            color: ColorsUtility().thirdColor,
-          ),
-          prefixIcon: Icon(
-            Icons.email_outlined,
-            color: ColorsUtility().thirdColor,
-          )),
-    );
-  }
+void _navigateToForgotPassword(BuildContext context) {
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgotPassword()));
+}
 }

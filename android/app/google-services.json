@@ -29,6 +29,13 @@
             {
               "client_id": "505044033557-okv0fhakto2agrqe25ij4hjtt5io5uda.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "505044033557-u0ga0ero1ocfvsb4jeh5oj4snbn67v9f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.takim98.tarifim.tarifim"
+              }
             }
           ]
         }
