@@ -1,11 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/mini_header.dart';
+import 'package:tarifim/auth_controller.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
 
 class ProfilAyarlarSayfasi extends StatefulWidget {
+  const ProfilAyarlarSayfasi({Key? key}) : super(key: key);
+
   @override
   _ProfilAyarlarSayfasi createState() => _ProfilAyarlarSayfasi();
 }
@@ -100,7 +103,7 @@ class _ProfilAyarlarSayfasi extends State {
 
                     child: Text("KAYDET",
                         style: TextStyle(
-                        fontFamily: "Montserrat",
+                            fontFamily: "Montserrat",
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
                             letterSpacing: 2.2,
@@ -114,15 +117,17 @@ class _ProfilAyarlarSayfasi extends State {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
-                    child: Text("ÇIKIŞ YAP",
-                        style: TextStyle(
-                        fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                            letterSpacing: 2.2,
-                            color: ColorsUtility().backgroundColor)),
-                    style: elevatedButtonStyle
+                      onPressed: () {
+                        AuthController.instance.logOut();
+                      },
+                      child: Text("ÇIKIŞ YAP",
+                          style: TextStyle(
+                              fontFamily: "Montserrat",
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              letterSpacing: 2.2,
+                              color: ColorsUtility().backgroundColor)),
+                      style: elevatedButtonStyle
                   )
 
                 ],
@@ -151,22 +156,22 @@ class _ProfilAyarlarSayfasi extends State {
           ]),
       child: TextField(
         style: TextStyle (
-          color: ColorsUtility().yazi,
-              fontFamily: "Montserrat"
+            color: ColorsUtility().yazi,
+            fontFamily: "Montserrat"
         ),
         obscureText: isPasswordTextField ? showPassword : false,
         decoration: InputDecoration(
             suffixIcon: isPasswordTextField
                 ? IconButton(
-                    onPressed: () {
-                      setState(() {
-                        showPassword = !showPassword;
-                      });
-                    },
-                    icon: Icon(
-                      Icons.remove_red_eye,
-                      color: ColorsUtility().yazi,
-                    ))
+                onPressed: () {
+                  setState(() {
+                    showPassword = !showPassword;
+                  });
+                },
+                icon: Icon(
+                  Icons.remove_red_eye,
+                  color: ColorsUtility().yazi,
+                ))
                 : null,
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
@@ -178,7 +183,7 @@ class _ProfilAyarlarSayfasi extends State {
             contentPadding: EdgeInsets.only(bottom: 3),
             labelText: labelText,
             labelStyle:
-                TextStyle(fontSize: 20, color: ColorsUtility().thirdColor),
+            TextStyle(fontSize: 20, color: ColorsUtility().thirdColor),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: Text,
             hintStyle: TextStyle(
