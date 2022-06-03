@@ -11,6 +11,11 @@ import 'package:tarifim/onboarding/onboarding3.dart';
 
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
+import 'package:tarifim/profil/profil_sayfasi.dart';
+import 'package:tarifim/sifremi_unuttum/sifremi_unuttum.dart';
+import 'package:tarifim/splash/splash_screen.dart';
+import 'package:tarifim/tarif_defteri/tarif_defteri_sayfasi.dart';
+import 'package:tarifim/tarif_defteri/tarif_defteri_sayfasi_view_model.dart';
 
 void main() {
   runApp(const MyApp());
