@@ -34,7 +34,7 @@ class _GirisYapState extends State<GirisYap> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            BaslikBar(),
+            const BaslikBar(),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
@@ -63,8 +63,7 @@ class _GirisYapState extends State<GirisYap> {
                                 borderSide: BorderSide(
                                     color:
                                         ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                borderRadius: MyRadius().borderRad),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: ColorsUtility().primaryColor,
@@ -75,8 +74,7 @@ class _GirisYapState extends State<GirisYap> {
                                 borderSide: BorderSide(
                                     color:
                                         ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                borderRadius: MyRadius().borderRad),
                             labelText: "Email",
                             labelStyle: TextStyle(
                               color: ColorsUtility().thirdColor,
@@ -110,25 +108,19 @@ class _GirisYapState extends State<GirisYap> {
                                   borderSide: BorderSide(
                                       color:
                                           ColorsUtility().thirdColor),
-                                  borderRadius:
-                                      const BorderRadius.all(
-                                          Radius.circular(20))),
+                                  borderRadius: MyRadius().borderRad),
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color:
                                         ColorsUtility().primaryColor,
                                   ),
-                                  borderRadius:
-                                      const BorderRadius.all(
-                                          Radius.circular(20))),
+                                  borderRadius: MyRadius().borderRad),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide(
                                       color:
                                           ColorsUtility().thirdColor),
-                                  borderRadius:
-                                      const BorderRadius.all(
-                                          Radius.circular(20))),
-                              labelText: "Şifre",
+                                  borderRadius: MyRadius().borderRad),
+                              labelText: TurkceItemler().sifre,
                               labelStyle: TextStyle(
                                 color: ColorsUtility().thirdColor,
                               ),
@@ -191,7 +183,7 @@ class _GirisYapState extends State<GirisYap> {
           _navigateToKayitOl(context);
         },
         child: Text(
-          "Hala kayıt olmadın mı ? Kayıt ol",
+          TurkceItemler().kayitOlGecis,
           style: TextStyle(
               color: ColorsUtility().secondaryColor,
               fontWeight: FontWeight.w600,
@@ -204,7 +196,7 @@ class _GirisYapState extends State<GirisYap> {
     return Padding(
         padding: PaddingDimen().horizaontalPadding,
         child: Text(
-          "Hoşgeldiniz",
+          TurkceItemler().welcome,
           style: TextStyle(
               color: ColorsUtility().secondaryColor,
               fontWeight: FontWeight.w300,
@@ -278,12 +270,12 @@ class _GirisYapState extends State<GirisYap> {
   }
 
   void _navigateToKayitOl(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => KayitOl()));
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const KayitOl()));
   }
 
   void _navigateToForgotPassword(BuildContext context) {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => ForgotPassword()));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => const ForgotPassword()));
   }
 }

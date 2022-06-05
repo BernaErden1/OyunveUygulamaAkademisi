@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/firebase/repository/data_repository.dart';
-import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 import 'package:tarifim/Widgets/mini_header2.dart';
 import '../firebase/models/tarif_model.dart';
@@ -19,7 +18,6 @@ class _TarifDefteriSayfasiState extends State<TarifDefteriSayfasi> {
   final DataRepository repository = DataRepository();
   @override
   Widget build(BuildContext context) {
-    final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
         body: Column(
       children: [
@@ -53,7 +51,7 @@ class _TarifDefteriSayfasiState extends State<TarifDefteriSayfasi> {
       BuildContext context, DocumentSnapshot snapshot) {
     final tarif = TarifModel.fromSnapshot(snapshot);
     return Card(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       color: ColorsUtility().backgroundColor,
       elevation: 3,
       child: ListTile(
@@ -66,7 +64,7 @@ class _TarifDefteriSayfasiState extends State<TarifDefteriSayfasi> {
               ));
         },
         leading: CircleAvatar(
-          backgroundImage: AssetImage("assets/${tarif.image}"),
+          backgroundImage: NetworkImage(tarif.image),
         ),
         title: Text(tarif.baslik,
             // ignore: prefer_const_constructors

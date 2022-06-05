@@ -31,7 +31,7 @@ class TarifCard extends StatelessWidget {
                 Colors.black.withOpacity(0.40),
                 BlendMode.multiply,
               ),
-              image: AssetImage("assets/$image"),
+              image: NetworkImage(image),
               fit: BoxFit.cover),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           boxShadow: [

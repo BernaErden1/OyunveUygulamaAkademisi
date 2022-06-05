@@ -1,10 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/mini_header.dart';
-
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
-
 import '../firebase/auth_controller.dart';
 
 class ProfilAyarlarSayfasi extends StatefulWidget {
@@ -22,17 +19,17 @@ class _ProfilAyarlarSayfasi extends State {
     final elevatedButtonStyle = ElevatedButton.styleFrom(
       primary: ColorsUtility().thirdColor,
       onPrimary: ColorsUtility().thirdColor,
-      padding: EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20)),
     );
     return Scaffold(
       body: SingleChildScrollView(
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         child: Column(
           children: [
             BaslikBarMini(yazi: TurkceItemler().profilDuzenle),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Center(
@@ -51,10 +48,10 @@ class _ProfilAyarlarSayfasi extends State {
                                 spreadRadius: 2,
                                 blurRadius: 10,
                                 color: Colors.black.withOpacity(0.1),
-                                offset: Offset(0, 5))
+                                offset: const Offset(0, 5))
                           ],
                           shape: BoxShape.circle,
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image:
                                   AssetImage("assets/kullanici.jpg"),
                               fit: BoxFit.cover))),
@@ -79,7 +76,7 @@ class _ProfilAyarlarSayfasi extends State {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             buildTextField(TurkceItemler().kullaniciAdi,
@@ -92,11 +89,11 @@ class _ProfilAyarlarSayfasi extends State {
                 false),
             buildTextField(TurkceItemler().konum, "İstanbul", false),
             buildTextField("Şifre", "*********", true),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -110,7 +107,8 @@ class _ProfilAyarlarSayfasi extends State {
                             color: ColorsUtility().thirdColor)),
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                     ),
@@ -138,11 +136,11 @@ class _ProfilAyarlarSayfasi extends State {
   }
 
   Widget buildTextField(
-      String labelText, String Text, bool isPasswordTextField) {
+      String labelText, String text, bool isPasswordTextField) {
     return Container(
-      padding: EdgeInsets.only(left: 15),
-      margin:
-          EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
+      padding: const EdgeInsets.only(left: 15),
+      margin: const EdgeInsets.only(
+          top: 10, bottom: 10, right: 20, left: 20),
       decoration: BoxDecoration(
           color: ColorsUtility().backgroundColor,
           borderRadius: BorderRadius.circular(30),
@@ -150,7 +148,7 @@ class _ProfilAyarlarSayfasi extends State {
             BoxShadow(
                 blurRadius: 10,
                 spreadRadius: 5,
-                offset: Offset(1, 1),
+                offset: const Offset(1, 1),
                 color: ColorsUtility().yazi.withOpacity(0.2))
           ]),
       child: TextField(
@@ -180,12 +178,12 @@ class _ProfilAyarlarSayfasi extends State {
                     color: ColorsUtility().backgroundColor)),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30)),
-            contentPadding: EdgeInsets.only(bottom: 3),
+            contentPadding: const EdgeInsets.only(bottom: 3),
             labelText: labelText,
             labelStyle: TextStyle(
                 fontSize: 20, color: ColorsUtility().thirdColor),
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            hintText: Text,
+            hintText: text,
             hintStyle: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

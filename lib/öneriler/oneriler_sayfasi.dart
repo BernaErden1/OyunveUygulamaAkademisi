@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/%C3%B6neriler/oneriler_view_model.dart';
 import 'package:tarifim/Widgets/mini_header2.dart';
-
-import '../Widgets/mini_header.dart';
+import 'package:tarifim/product/dil/turkce_itemler.dart';
 import '../product/utility.dart';
 
 class OnerilerSayfasi extends StatefulWidget {
@@ -29,11 +28,10 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
 
   @override
   Widget build(BuildContext context) {
-    final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
       body: Column(
         children: [
-          BaslikBarMini2(yazi: "Öneriler"),
+          BaslikBarMini2(yazi: TurkceItemler().oneriler),
           spaceSize(),
           Expanded(
             child: ListView.separated(
@@ -51,7 +49,7 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
                         fontSize: 18),
                   ),
                   subtitle: Text(mockList[index].subtitle,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black54,
                           fontWeight: FontWeight.w600,
                           fontFamily: "Montserrat",

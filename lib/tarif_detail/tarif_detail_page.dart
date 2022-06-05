@@ -22,7 +22,6 @@ class _TarifDetailState extends State<TarifDetail> {
 
   @override
   Widget build(BuildContext context) {
-    final heightone = MediaQuery.of(context).size.height * 0.7;
     final heighttwo = MediaQuery.of(context).size.height * 0.3;
     final myWidth = MediaQuery.of(context).size.height;
 
@@ -45,7 +44,7 @@ class _TarifDetailState extends State<TarifDetail> {
   Widget _buildList(BuildContext context, DocumentSnapshot snapshot,
       double heighttwo, double myWidth) {
     final tarif = TarifModel.fromSnapshot(snapshot);
-    final _image = tarif.image;
+
     return Stack(
       children: [
         Column(
@@ -55,7 +54,7 @@ class _TarifDetailState extends State<TarifDetail> {
               width: myWidth,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/$_image"),
+                      image: NetworkImage(tarif.image),
                       fit: BoxFit.cover)),
             ),
             spaceSize(size: 15),
@@ -84,8 +83,8 @@ class _TarifDetailState extends State<TarifDetail> {
                       });
                     },
                     icon: !tarif.isSave
-                        ? Icon(Icons.bookmark_add_outlined)
-                        : Icon(Icons.bookmark_added_rounded))
+                        ? const Icon(Icons.bookmark_add_outlined)
+                        : const Icon(Icons.bookmark_added_rounded))
               ],
             ),
             spaceSize(size: 15),

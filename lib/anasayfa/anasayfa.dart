@@ -31,7 +31,7 @@ class _AnasayfaState extends State<Anasayfa> {
     return Scaffold(
       body: Column(
         children: [
-          const BaslikBarMini2(yazi: "Mutfakta Neler Var?"),
+          BaslikBarMini2(yazi: TurkceItemler().uygIsmi),
           spaceSize(),
           Padding(
             padding: PaddingDimen().horizaontalPadding,
@@ -115,20 +115,17 @@ class _AnasayfaState extends State<Anasayfa> {
           focusedBorder: OutlineInputBorder(
               borderSide:
                   BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
+              borderRadius: MyRadius().borderRad),
           enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
                 color: ColorsUtility().primaryColor,
               ),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
+              borderRadius: MyRadius().borderRad),
           border: OutlineInputBorder(
               borderSide:
                   BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
-          labelText: "Ara",
+              borderRadius: MyRadius().borderRad),
+          labelText: TurkceItemler().ara,
           labelStyle: TextStyle(
             color: ColorsUtility().thirdColor,
           ),
@@ -151,7 +148,7 @@ class _AnasayfaState extends State<Anasayfa> {
                 ColorsUtility().primaryColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: MyRadius().borderRad,
                     side: BorderSide(
                         color: ColorsUtility().thirdColor)))),
         onPressed: () {

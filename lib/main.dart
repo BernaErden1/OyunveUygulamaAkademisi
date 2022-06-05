@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
-
-import 'package:tarifim/main_page.dart';
-
+import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/splash/splash_screen.dart';
-
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';
-
 import 'firebase/auth_controller.dart';
 
 Future<void> main() async {
@@ -24,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Mutfakta Neler Var ?',
+      title: TurkceItemler().uygIsmi,
       theme: LightTheme(context).lightTema,
       darkTheme: DarkTheme().darkTema,
       home: const SplashScreen(),

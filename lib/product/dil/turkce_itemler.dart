@@ -31,4 +31,9 @@ class TurkceItemler {
   final onboard3Headtext = "Tarifleri paylaşın!";
   final alertMessageText =
       "Tarif ekleme henüz yapım aşamasında çok yakında sizlerle buluşacak.";
+  final sifre = "Şifre";
+  final kayitOlGecis = "Hala kayıt olmadın mı ? Kayıt ol";
+  final welcome = "Hoşgeldiniz";
+  final letsgo = "Başlayalım";
+  final oneriler = "Öneriler";
 }

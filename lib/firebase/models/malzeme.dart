@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class Malzeme {
   final String? malzeme1;
   final String? malzeme2;

@@ -85,7 +85,7 @@ class WavyClipper1 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     debugPrint(size.width.toString());
-    var path = new Path();
+    var path = Path();
     path.lineTo(0, size.height);
     var firstStart = Offset(size.width / 5, size.height);
     var firstEnd = Offset(size.width / 2.25, size.height - 50.0);
@@ -112,7 +112,7 @@ class WavyClipper2 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     debugPrint(size.width.toString());
-    var path = new Path();
+    var path = Path();
     path.lineTo(0, size.height);
     var firstStart = Offset(size.width / 2.35, size.height);
     var firstEnd = Offset(size.width / 1.85, size.height - 30.0);
@@ -139,7 +139,7 @@ class WavyClipper3 extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     debugPrint(size.width.toString());
-    var path = new Path();
+    var path = Path();
     path.lineTo(0, size.height / 1.5);
     var firstStart = Offset(size.width / 5, size.height / 1.5);
     var firstEnd = Offset(size.width / 2.25, size.height / 1.25);
