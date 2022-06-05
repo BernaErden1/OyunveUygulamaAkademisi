@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/%C3%B6neriler/oneriler_view_model.dart';
+import 'package:tarifim/Widgets/mini_header2.dart';
 
 import '../Widgets/mini_header.dart';
 import '../product/utility.dart';
@@ -30,10 +31,9 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
   Widget build(BuildContext context) {
     final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
-      body:
-      Column(
+      body: Column(
         children: [
-          BaslikBarMini(yazi: "Öneriler"),
+          BaslikBarMini2(yazi: "Öneriler"),
           spaceSize(),
           Expanded(
             child: ListView.separated(
@@ -41,16 +41,18 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   onTap: () {},
-                  title: Text(mockList[index].title,
-                      // ignore: prefer_const_constructors
+                  title: Text(
+                    mockList[index].title,
+                    // ignore: prefer_const_constructors
                     style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.w600,
                         fontFamily: "Montserrat",
-                        fontSize: 18),),
+                        fontSize: 18),
+                  ),
                   subtitle: Text(mockList[index].subtitle,
                       style: TextStyle(
-                          color: Colors.black54 ,
+                          color: Colors.black54,
                           fontWeight: FontWeight.w600,
                           fontFamily: "Montserrat",
                           fontSize: 13)),

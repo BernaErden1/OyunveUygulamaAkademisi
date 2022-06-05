@@ -1,10 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/mini_header.dart';
-import 'package:tarifim/auth_controller.dart';
+
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
+import '../firebase/auth_controller.dart';
 
 class ProfilAyarlarSayfasi extends StatefulWidget {
   const ProfilAyarlarSayfasi({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class ProfilAyarlarSayfasi extends StatefulWidget {
   @override
   _ProfilAyarlarSayfasi createState() => _ProfilAyarlarSayfasi();
 }
-
 
 class _ProfilAyarlarSayfasi extends State {
   bool showPassword = false;
@@ -55,7 +55,8 @@ class _ProfilAyarlarSayfasi extends State {
                           ],
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: AssetImage("assets/kullanici.jpg"),
+                              image:
+                                  AssetImage("assets/kullanici.jpg"),
                               fit: BoxFit.cover))),
                   Positioned(
                       bottom: 0,
@@ -81,10 +82,10 @@ class _ProfilAyarlarSayfasi extends State {
             SizedBox(
               height: 20,
             ),
-            buildTextField(
-                TurkceItemler().kullaniciAdi, "Kullanıcı adı ve soyadı", false),
-            buildTextField(
-                TurkceItemler().kullaniciEmail, "tarifim@gmail.com", false),
+            buildTextField(TurkceItemler().kullaniciAdi,
+                "Kullanıcı adı ve soyadı", false),
+            buildTextField(TurkceItemler().kullaniciEmail,
+                "tarifim@gmail.com", false),
             buildTextField(
                 TurkceItemler().hakkimda,
                 "Uygulamayı üç aydır kullanıyorum ve oldukça faydasını...",
@@ -100,7 +101,6 @@ class _ProfilAyarlarSayfasi extends State {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   OutlinedButton(
-
                     child: Text("KAYDET",
                         style: TextStyle(
                             fontFamily: "Montserrat",
@@ -110,7 +110,6 @@ class _ProfilAyarlarSayfasi extends State {
                             color: ColorsUtility().thirdColor)),
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
-
                       padding: EdgeInsets.symmetric(horizontal: 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -126,10 +125,9 @@ class _ProfilAyarlarSayfasi extends State {
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
                               letterSpacing: 2.2,
-                              color: ColorsUtility().backgroundColor)),
-                      style: elevatedButtonStyle
-                  )
-
+                              color:
+                                  ColorsUtility().backgroundColor)),
+                      style: elevatedButtonStyle)
                 ],
               ),
             )
@@ -143,7 +141,8 @@ class _ProfilAyarlarSayfasi extends State {
       String labelText, String Text, bool isPasswordTextField) {
     return Container(
       padding: EdgeInsets.only(left: 15),
-      margin: EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
+      margin:
+          EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
       decoration: BoxDecoration(
           color: ColorsUtility().backgroundColor,
           borderRadius: BorderRadius.circular(30),
@@ -155,35 +154,36 @@ class _ProfilAyarlarSayfasi extends State {
                 color: ColorsUtility().yazi.withOpacity(0.2))
           ]),
       child: TextField(
-        style: TextStyle (
-            color: ColorsUtility().yazi,
-            fontFamily: "Montserrat"
-        ),
+        style: TextStyle(
+            color: ColorsUtility().yazi, fontFamily: "Montserrat"),
         obscureText: isPasswordTextField ? showPassword : false,
         decoration: InputDecoration(
             suffixIcon: isPasswordTextField
                 ? IconButton(
-                onPressed: () {
-                  setState(() {
-                    showPassword = !showPassword;
-                  });
-                },
-                icon: Icon(
-                  Icons.remove_red_eye,
-                  color: ColorsUtility().yazi,
-                ))
+                    onPressed: () {
+                      setState(() {
+                        showPassword = !showPassword;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.remove_red_eye,
+                      color: ColorsUtility().yazi,
+                    ))
                 : null,
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
-                borderSide: BorderSide(color: ColorsUtility().backgroundColor)),
+                borderSide: BorderSide(
+                    color: ColorsUtility().backgroundColor)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
-                borderSide: BorderSide(color: ColorsUtility().backgroundColor)),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+                borderSide: BorderSide(
+                    color: ColorsUtility().backgroundColor)),
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30)),
             contentPadding: EdgeInsets.only(bottom: 3),
             labelText: labelText,
-            labelStyle:
-            TextStyle(fontSize: 20, color: ColorsUtility().thirdColor),
+            labelStyle: TextStyle(
+                fontSize: 20, color: ColorsUtility().thirdColor),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: Text,
             hintStyle: TextStyle(

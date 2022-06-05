@@ -17,21 +17,18 @@ class TurkceItemler {
   final takipEdilen = "Takip Edilen";
   final takipcilerim = "Takipçilerim";
   final degerlendirmelerim = "Değerlendirmelerim";
-
   final ara = "Ara";
-
   final profilDuzenle = "Profili Düzenle";
   final kullaniciEmail = "E-posta";
   final hakkimda = "Hakkımda";
-
   final konum = "Konum";
-
   final webSitesi = "Web sitesi";
-
-
-  final onboard2subtext = "Yapmak istediğiniz yemek tariflerini kaydedin.";
+  final onboard2subtext =
+      "Yapmak istediğiniz yemek tariflerini kaydedin.";
   final onboard2Headtext = "Tarif defterine ekle!";
-  final onboard3subtext = "Beğendiğiniz tarifleri dostlarınızla paylaşın.";
+  final onboard3subtext =
+      "Beğendiğiniz tarifleri dostlarınızla paylaşın.";
   final onboard3Headtext = "Tarifleri paylaşın!";
-
+  final alertMessageText =
+      "Tarif ekleme henüz yapım aşamasında çok yakında sizlerle buluşacak.";
 }
