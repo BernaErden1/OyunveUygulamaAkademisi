@@ -21,10 +21,11 @@ class AuthController extends GetxController {
 
   _initialScreen(User? user) {
     if (user == null) {
+      // ignore: avoid_print
       print("Giriş Sayfası");
-      Get.offAll(() => GirisYap());
+      Get.offAll(() => const GirisYap());
     } else {
-      Get.offAll(() => MainPage());
+      Get.offAll(() => const MainPage());
     }
   }
 

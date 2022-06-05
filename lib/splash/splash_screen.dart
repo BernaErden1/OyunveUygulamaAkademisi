@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:tarifim/giris_yap/giris_yap.dart';
 import 'package:tarifim/main_page.dart';
 import 'package:tarifim/onboarding/onboarding1.dart';
 

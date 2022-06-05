@@ -61,8 +61,8 @@ List<Map<String, dynamic>>? _malzemeList(List<Malzeme>? malzemeler) {
     return null;
   }
   final malzemeMap = <Map<String, dynamic>>[];
-  malzemeler.forEach((malzeme) {
+  for (var malzeme in malzemeler) {
     malzemeMap.add(malzeme.toJson());
-  });
+  }
   return malzemeMap;
 }
