@@ -10,7 +10,7 @@ import 'package:tarifim/main_page.dart';
 import 'package:tarifim/onboarding/onboarding1.dart';
 import 'package:tarifim/onboarding/onboarding2.dart';
 import 'package:tarifim/onboarding/onboarding3.dart';
-import 'package:tarifim/splash/splash_screen.dart';
+import 'package:tarifim/splash/splash_screen.dart'; 
 
 import 'package:tarifim/product/tema/dark_tema.dart';
 import 'package:tarifim/product/tema/light_tema.dart';

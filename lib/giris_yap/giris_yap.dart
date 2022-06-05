@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/header_main.dart';
 import 'package:tarifim/auth_controller.dart';
 import 'package:tarifim/kayit_ol/kayit_ol.dart';
+import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
+import 'package:tarifim/profil/profil_sayfasi.dart';
 
 import 'package:tarifim/sifremi_unuttum/sifremi_unuttum.dart';
 
@@ -227,7 +229,12 @@ class _GirisYapState extends State<GirisYap> {
                     side: BorderSide(
                         color: ColorsUtility().thirdColor)))),
         onPressed: () {
-          AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
+          AuthController.instance.login(emailController.text.trim(), passwordController.text.trim()).then((kullanici){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder:(context)=> MainPage(),),
+            );
+          });
         },
         child: Text(
           TurkceItemler().girisYap,

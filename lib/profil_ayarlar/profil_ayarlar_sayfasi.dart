@@ -1,5 +1,10 @@
+import 'dart:io';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/auth_controller.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
@@ -15,7 +20,37 @@ class ProfilAyarlarSayfasi extends StatefulWidget {
 
 
 class _ProfilAyarlarSayfasi extends State {
+
+  void initState() {
+    super.initState();
+    getImageURL().then((value){
+      indirmeLink = value;
+      setState(() {
+        
+      });
+    });
+  }
+  Future<String?> getImageURL()async{
+    return await FirebaseStorage.instance.ref().child("profilresimleri").child(FirebaseAuth.instance.currentUser!.uid).child("profilresmi.png").getDownloadURL();
+  }
   bool showPassword = false;
+  String? indirmeLink;
+   late File dosya;
+   kamerdanYukle() async{
+    var alinanDosya = await ImagePicker().pickImage(source: ImageSource.camera);
+    if (alinanDosya == null){
+      return;
+    }
+    setState((){
+      dosya = File(alinanDosya!.path);
+    });
+    final referansyol = FirebaseStorage.instance.ref().child("profilresimleri").child(FirebaseAuth.instance.currentUser!.uid).child("profilresmi.png");
+    final yukleme = referansyol.putFile(dosya);
+    String url = await (await yukleme).ref.getDownloadURL();
+    setState(() {
+      indirmeLink = url;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +73,11 @@ class _ProfilAyarlarSayfasi extends State {
             Center(
               child: Stack(
                 children: [
+                  InkWell(
+                    onTap:(){
+                      kamerdanYukle();
+                    },
+                    child:
                   Container(
                       width: 130,
                       height: 130,
@@ -55,8 +95,9 @@ class _ProfilAyarlarSayfasi extends State {
                           ],
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: AssetImage("assets/kullanici.jpg"),
+                              image: indirmeLink != null ? NetworkImage(indirmeLink!) as ImageProvider : AssetImage("assets/kullanici.jpg"),
                               fit: BoxFit.cover))),
+                  ),
                   Positioned(
                       bottom: 0,
                       right: 0,
@@ -108,7 +149,9 @@ class _ProfilAyarlarSayfasi extends State {
                             fontSize: 14,
                             letterSpacing: 2.2,
                             color: ColorsUtility().thirdColor)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     style: OutlinedButton.styleFrom(
 
                       padding: EdgeInsets.symmetric(horizontal: 40),

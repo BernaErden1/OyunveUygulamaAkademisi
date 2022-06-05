@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tarifim/anasayfa/anasayfa.dart';
 import 'package:tarifim/giris_yap/giris_yap.dart';
+import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/utility.dart';
 
 class AuthController extends GetxController {
@@ -24,7 +25,7 @@ class AuthController extends GetxController {
       print("Giriş Sayfası");
       Get.offAll(()=>GirisYap());
     }else{
-      Get.offAll(()=>Anasayfa());
+      Get.offAll(()=>GirisYap());
     }
   }
 

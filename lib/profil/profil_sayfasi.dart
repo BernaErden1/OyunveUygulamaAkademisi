@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
@@ -8,11 +13,28 @@ import 'package:tarifim/profil_ayarlar/profil_ayarlar_sayfasi.dart';
 class ProfilSayfasi extends StatefulWidget {
   const ProfilSayfasi({Key? key}) : super(key: key);
 
-  @override
+  @override 
   _ProfilSayfasi createState() => _ProfilSayfasi();
 }
 
 class _ProfilSayfasi extends State {
+  @override
+  void initState() {
+    super.initState();
+    getImageURL().then((value){
+      profilresmi = value;
+      setState(() {
+        
+      });
+    });
+    
+  }
+  String? userName;
+  String? profilresmi;
+  Future<String?> getImageURL()async{
+    return await FirebaseStorage.instance.ref().child("profilresimleri").child(FirebaseAuth.instance.currentUser!.uid).child("profilresmi.png").getDownloadURL();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,8 +79,8 @@ class _ProfilSayfasi extends State {
                                 ],
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/kullanici.jpg"),
+                                    image: profilresmi == null ? AssetImage(
+                                        "assets/kullanici.jpg") : NetworkImage(profilresmi!) as ImageProvider,
                                     fit: BoxFit.cover))),
                         SizedBox(
                           width: 13,
@@ -543,3 +565,4 @@ class _ProfilSayfasi extends State {
         ));
   }
 }
+

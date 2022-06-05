@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/auth_controller.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
@@ -206,11 +208,16 @@ class _KayitOlState extends State<KayitOl> {
                                       borderRadius: BorderRadius.circular(20),
                                       side: BorderSide(
                                           color: ColorsUtility().thirdColor)))),
-                          onPressed: () {
+                          onPressed: () async{
                             AuthController.instance.register(
                                 nameController.text.trim(),
                                 emailController.text.trim(),
-                                passwordController.text.trim());
+                                passwordController.text.trim()).then((kullanici){
+                                  FirebaseFirestore.instance.collection("Kullanicilar").doc(emailController.text).set({
+                                    "KullaniciAdi":nameController.text,
+                                    "KullaniciEposta":emailController.text, "KullaniciSifre":passwordController.text,
+                                  });
+                                } );
                           },
                           child: Text(
                             TurkceItemler().kayitOl,
