@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/tarif_kartlari_data.dart';
 import 'package:tarifim/product/utility.dart';
 import 'package:tarifim/profil_ayarlar/profil_ayarlar_sayfasi.dart';
+
+import '../Widgets/mini_header2.dart';
 
 class ProfilSayfasi extends StatefulWidget {
   const ProfilSayfasi({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _ProfilSayfasi extends State {
         body: Column(
           children: [
             //Profilim yazısı
-            BaslikBarMini(yazi: TurkceItemler().profilim),
+            const BaslikBarMini2(yazi: "Profilim"),
             Expanded(
               child: Container(
                 height: MediaQuery.of(context).size.height,
@@ -126,6 +127,8 @@ class _ProfilSayfasi extends State {
                             )
                           ]),
                       child: Row(
+                        mainAxisAlignment:
+                            MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Column(
@@ -168,9 +171,6 @@ class _ProfilSayfasi extends State {
                               )
                             ],
                           ),
-                          SizedBox(
-                            width: 30,
-                          ),
                           Column(
                             children: [
                               Row(
@@ -210,9 +210,6 @@ class _ProfilSayfasi extends State {
                                     fontSize: 14),
                               )
                             ],
-                          ),
-                          SizedBox(
-                            width: 30,
                           ),
                           Column(
                             children: [
