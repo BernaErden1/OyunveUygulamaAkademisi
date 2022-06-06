@@ -186,9 +186,15 @@ Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve
 
 
 - **Ürün Durumu**: 
-(?)
 
-
+![1](https://user-images.githubusercontent.com/70723400/172241113-ce7b9fc1-450b-4a29-86c9-7285c26cef45.jpg)
+![2](https://user-images.githubusercontent.com/70723400/172241124-87e3ddb7-d158-4488-81cd-5487a1941a59.jpg)
+![3](https://user-images.githubusercontent.com/70723400/172241125-b3a4bd7a-0154-4de6-89d2-9730a1dc2117.jpg)
+![4](https://user-images.githubusercontent.com/70723400/172241127-aa99b22d-1d6e-417f-9245-a8f50786a976.jpg)
+![5](https://user-images.githubusercontent.com/70723400/172241128-2d005d64-2314-4628-a35f-572236e38736.jpg)
+![6](https://user-images.githubusercontent.com/70723400/172241129-e3274964-0aa6-4c8b-b000-e54d7194a3b7.jpg)
+![7](https://user-images.githubusercontent.com/70723400/172241133-b008530e-76b7-44a6-b01a-cd4cb037a8ac.jpg)
+![8](https://user-images.githubusercontent.com/70723400/172241134-035f498b-4921-43e6-a0a7-d56b57710e95.png)
 
 - **Sprint Review**: 
 *Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
