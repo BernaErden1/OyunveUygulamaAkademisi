@@ -98,7 +98,7 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 *Figmadaki tasarımların kod tarafında görev dağılımı yapılmıştır.
 *Ana ekran ve tarif ekranları tasarlandı
-*Giriş ekranı ve onboardingler yapışdı.
+*Giriş ekranı ve onboardingler yapıldı.
 *Profil ve favoriler ekranları yapıldı.
 *Kod içerisindeki hatalar ikili/üçlü toplantılar yapılarak giderildi.
 *Zoom ve slack üzerinden toplantılar gerçekleştirilmiştir ve buralarda kod tarafında herkesin aynı noktaya gelmesi sağlandı.
@@ -157,19 +157,19 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 # Sprint 3
 
-**Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
+- **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
 *Uygulama firebase bağlandı.
 *Bir önceki sprintte yapılan ekran görüntüleri ile ilgili düzeltmeler yapıldı. Alternatif header tasarımları yapıldı.
 *Firebase autantication ile giriş yap ekranı, kayıt ol ekranı, şifremi unuttum yapıları tamamlandı.
-*Tariflerin kaydını ve profil kayıtlarınon gösterilmesi için databese oluşturuldu.
-*Apk dosyası oluşturuldu.
-
+*Tariflerin kaydını ve profil kayıtlarının gösterilmesi için databese oluşturuldu.
+*Kod düzeltmeleri yapıldı.
+*Hatalar düzeltildi.
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr.
-Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir.En zorlayıcı olduğu düşünülen kısım burası olduğu için sadece firebase başlığı altında 150 puanlık bir backlog ihtiyacı hissedildi.
+Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir. En zorlayıcı olduğu düşünülen kısım burası olduğu için sadece firebase başlığı altında 150 puanlık bir backlog ihtiyacı hissedildi.
 
 - **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir. Önce firebase bağlama kısmı yapıldı ve diğer adımlara daha sonra geçildi. Orada da kendi içinde küçük parçalara bölerek kesişim noktaları olan bir akış mantığına göre görevlendirmeler yapıldı.
 
