@@ -42,7 +42,7 @@ class _ProfilAyarlarSayfasi extends State {
       return;
     }
     setState((){
-      dosya = File(alinanDosya!.path);
+      dosya = File(alinanDosya.path);
     });
     final referansyol = FirebaseStorage.instance.ref().child("profilresimleri").child(FirebaseAuth.instance.currentUser!.uid).child("profilresmi.png");
     final yukleme = referansyol.putFile(dosya);

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/%C3%B6neriler/oneriler_view_model.dart';
 
@@ -12,18 +13,23 @@ class OnerilerSayfasi extends StatefulWidget {
 }
 
 class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
-  late final List<OnerilerModel> mockList;
-  final mock = Mock();
+  List<dynamic>? oneriler;
+  Future<List<dynamic>> getMarker() async{
+    var snapshot = await FirebaseFirestore.instance.collection('Oneriler').get();
+    return snapshot.docs.map((doc) => doc.data()["OneriDesc"]).toList();
+}
+
 
   @override
   void initState() {
     super.initState();
-    mockList = [
-      mock.mock1,
-      mock.mock2,
-      mock.mock3,
-      mock.mock4,
-    ];
+    getMarker().then((value)  {
+      oneriler = value;
+      print(oneriler);
+      setState(() {
+        
+      });
+    });
   }
 
   @override
@@ -41,26 +47,21 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   onTap: () {},
-                  title: Text(mockList[index].title,
+                  title: Text(oneriler![index].toString(),
                       // ignore: prefer_const_constructors
                     style: TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.w600,
                         fontFamily: "Montserrat",
                         fontSize: 18),),
-                  subtitle: Text(mockList[index].subtitle,
-                      style: TextStyle(
-                          color: Colors.black54 ,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: "Montserrat",
-                          fontSize: 13)),
+                  
                   trailing: const Icon(Icons.navigate_next_outlined),
                 );
               },
               separatorBuilder: (BuildContext context, int index) {
                 return Divider(color: ColorsUtility().thirdColor);
               },
-              itemCount: mockList.length,
+              itemCount: oneriler == null ? 0 : oneriler!.length,
             ),
           ),
         ],

@@ -454,7 +454,7 @@ class _ProfilSayfasi extends State {
                                                                     offset: Offset(0, 10))
                                                               ],
                                                               shape: BoxShape.circle,
-                                                              image: DecorationImage(image: AssetImage("assets/kullanici.jpg"), fit: BoxFit.cover))),
+                                                              image: DecorationImage(image: profilresmi == null ? AssetImage("assets/kullanici.jpg") : NetworkImage(profilresmi!) as ImageProvider, fit: BoxFit.cover))),
                                                       SizedBox(
                                                         width: 5,
                                                       ),
