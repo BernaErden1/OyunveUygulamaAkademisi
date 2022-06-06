@@ -30,8 +30,7 @@ class Onboarding1 extends StatelessWidget {
                     height: _heighttwo,
                     color: ColorsUtility().primaryColor,
                     child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: PaddingDimen().horizaontalPadding,
                       child: Column(
                         children: [
                           HeadText(
@@ -65,12 +64,7 @@ class Onboarding1 extends StatelessWidget {
                               children: [
                                 IconButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const Onboarding2(),
-                                        ));
+                                    _navigateToOnb2(context);
                                   },
                                   icon: const Icon(
                                       Icons.navigate_next_outlined),
@@ -92,4 +86,9 @@ class Onboarding1 extends StatelessWidget {
       ),
     );
   }
+}
+
+void _navigateToOnb2(BuildContext context) {
+  Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => const Onboarding2()));
 }

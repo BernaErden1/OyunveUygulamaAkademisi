@@ -3,7 +3,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
-import 'package:tarifim/splash/splash_screen.dart';
 
 class Onboarding3 extends StatefulWidget {
   const Onboarding3({Key? key}) : super(key: key);
@@ -15,7 +14,9 @@ class Onboarding3 extends StatefulWidget {
 class _Onboarding3State extends State<Onboarding3> {
   _storeOnboardInfo() async {
     int isViewed = 1;
+    // ignore: avoid_print
     print("Shared pref called");
+    // ignore: avoid_print
     print(isViewed);
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setInt('onBoard', isViewed);
@@ -45,8 +46,7 @@ class _Onboarding3State extends State<Onboarding3> {
                     height: _heighttwo,
                     color: ColorsUtility().primaryColor,
                     child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: PaddingDimen().horizaontalPadding,
                       child: Column(
                         children: [
                           HeadText(
@@ -91,15 +91,11 @@ class _Onboarding3State extends State<Onboarding3> {
                                     onPressed: () {
                                       setState(() {
                                         _storeOnboardInfo();
-                                        Navigator.pushAndRemoveUntil(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const MainPage()),
-                                            (route) => false);
+                                        _navigateToMain(context);
                                       });
                                     },
-                                    child: Text("Başlayalım",
+                                    child: Text(
+                                        TurkceItemler().letsgo,
                                         style: TextStyle(
                                             color: ColorsUtility()
                                                 .backgroundColor,
@@ -122,4 +118,11 @@ class _Onboarding3State extends State<Onboarding3> {
       ),
     );
   }
+}
+
+void _navigateToMain(BuildContext context) {
+  Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const MainPage()),
+      (route) => false);
 }

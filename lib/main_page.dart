@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tarifim/%C3%B6neriler/oneriler_sayfasi.dart';
 import 'package:tarifim/anasayfa/anasayfa.dart';
+import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 import 'package:tarifim/profil/profil_sayfasi.dart';
-import 'package:tarifim/profil_ayarlar/profil_ayarlar_sayfasi.dart';
 import 'package:tarifim/tarif_defteri/tarif_defteri_sayfasi.dart';
 
 class MainPage extends StatefulWidget {
@@ -35,7 +35,9 @@ class _MainPageState extends State<MainPage>
                 resizeToAvoidBottomInset: false,
                 extendBody: true,
                 floatingActionButton: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _showDialog(context);
+                  },
                   child: const Icon(Icons.add_outlined),
                 ),
                 floatingActionButtonLocation:
@@ -61,13 +63,41 @@ class _MainPageState extends State<MainPage>
                   children: [
                     const Anasayfa(),
                     const TarifDefteriSayfasi(),
-                     ProfilSayfasi(),
+                    const ProfilSayfasi(),
                     const OnerilerSayfasi()
                   ],
                 ),
               )),
         ),
       ],
+    );
+  }
+
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text(""),
+          backgroundColor: ColorsUtility().backgroundColor,
+          content: Text(
+            TurkceItemler().alertMessageText,
+            style: const TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.w400,
+                fontFamily: "Montserrat",
+                fontSize: 15),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text("Tamam"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }

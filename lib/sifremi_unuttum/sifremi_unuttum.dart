@@ -3,13 +3,14 @@ import '../Widgets/header_main.dart';
 import '../product/utility.dart';
 
 OutlineInputBorder _buildBorder(Color color) {
-    return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(25),
-        borderSide: BorderSide(
-          color: color,
-          width: 1,
-        ));
-  }
+  return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(25),
+      borderSide: BorderSide(
+        color: color,
+        width: 1,
+      ));
+}
+
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
   final String content =
@@ -20,12 +21,11 @@ class ForgotPassword extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            BaslikBar(),
+            const BaslikBar(),
             const SizedBox(
               height: 150,
             ),
-                  Image.asset('assets/locked.png'),
-
+            Image.asset('assets/locked.png'),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -45,36 +45,42 @@ class ForgotPassword extends StatelessWidget {
                     decoration: InputDecoration(
                       prefixIcon: Image.asset('assets/mail.png'),
                       hintText: 'E-posta',
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                           color: Colors.black54,
                           fontWeight: FontWeight.w500,
                           fontFamily: "Montserrat",
                           fontSize: 18),
-                      enabledBorder: _buildBorder(ColorsUtility().primaryColor),
-                      disabledBorder:_buildBorder(ColorsUtility().primaryColor),
-                      focusedBorder: _buildBorder(ColorsUtility().primaryColor),
-                      errorBorder: _buildBorder(ColorsUtility().primaryColor),
+                      enabledBorder:
+                          _buildBorder(ColorsUtility().primaryColor),
+                      disabledBorder:
+                          _buildBorder(ColorsUtility().primaryColor),
+                      focusedBorder:
+                          _buildBorder(ColorsUtility().primaryColor),
+                      errorBorder:
+                          _buildBorder(ColorsUtility().primaryColor),
                     ),
                   ),
-                  Row(mainAxisAlignment: MainAxisAlignment.end,children: [
-                    
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: InkWell(
-      child: CircleAvatar(
-        radius: 25,
-        backgroundColor: ColorsUtility().primaryColor,
-        child: const Icon(
-          Icons.arrow_forward,
-          color: Colors.white,
-          size: 40,
-        ),
-      ),
-      onTap: () {},
-    ),
-                    ),
-  
-                  ],)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: InkWell(
+                          child: CircleAvatar(
+                            radius: 25,
+                            backgroundColor:
+                                ColorsUtility().primaryColor,
+                            child: const Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                              size: 40,
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),

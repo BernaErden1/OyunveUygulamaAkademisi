@@ -84,6 +84,10 @@ SizedBox spaceSize({double size = 30}) {
   );
 }
 
+class MyRadius {
+  final borderRad = const BorderRadius.all(Radius.circular(20));
+}
+
 class PaddingDimen {
   final horizaontalPadding =
       const EdgeInsets.symmetric(horizontal: 16);
