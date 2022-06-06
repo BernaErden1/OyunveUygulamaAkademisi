@@ -25,7 +25,7 @@ class _TarifDetailState extends State<TarifDetail> {
     final heighttwo = MediaQuery.of(context).size.height * 0.3;
     final myWidth = MediaQuery.of(context).size.height;
 
-    return Scaffold(
+   return Scaffold(
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(bottom: 30),
         child: StreamBuilder<DocumentSnapshot>(
