@@ -159,21 +159,30 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-*(?)
+*Uygulama firebase bağlandı.
+*Bir önceki sprintte yapılan ekran görüntüleri ile ilgili düzeltmeler yapıldı. Alternatif header tasarımları yapıldı.
+*Firebase autantication ile giriş yap ekranı, kayıt ol ekranı, şifremi unuttum yapıları tamamlandı.
+*Tariflerin kaydını ve profil kayıtlarınon gösterilmesi için databese oluşturuldu.
+*Apk dosyası oluşturuldu.
+
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Miroda backlog kısmının içerisine puanlar yazılmıştr.
-(?)
+Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve 2 nin katlarına göre hikaye puanları verilmiştir.En zorlayıcı olduğu düşünülen kısım burası olduğu için sadece firebase başlığı altında 150 puanlık bir backlog ihtiyacı hissedildi.
 
-- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir.
+- **Backlog düzeni ve Story seçimleri**: Öncelikle user story ler belirlenmiş daha sonra bunlar epic lere göre backloglara kabaca ayrılmıştır. Backlog da yer alan taskların içerisinde user story içerikleri ve story puanları yer almaktadır. Sprint içindeki tasklar rastgele yapılmamaktadır, belirli bir öncelik sırasına göre akış belirlenmiştir. Miro Board'da gözüken kırmızı itemler taskları gösterirken mavi item'ler story pointlerin yer aldığı taskları göstermektedir. Önce firebase bağlama kısmı yapıldı ve diğer adımlara daha sonra geçildi. Orada da kendi içinde küçük parçalara bölerek kesişim noktaları olan bir akış mantığına göre görevlendirmeler yapıldı.
 
 - **Daily Scrum**: Daily Scrum toplantıları kolay iletişimi ve kişilerin birbirine ulaşılabilirliği konusunda esnek olması nedeniyle daha çok Whatsapp üzerinden yapılmıştır. Bunun dışında Slack içerisinde bir grup kurulmuş ve bazı aktarımlar oradan yapılmıştır. Sesli ve görüntülü olarak Zoom ve Slack üzerinden toplantılar gerçekleştirilmiştir.
-(?)
+[Daily Scrum3.docx](https://github.com/BernaErden1/OyunveUygulamaAkademisi/files/8841156/Daily.Scrum3.docx)
+
 
 - **Sprint board update**: 
-(?)
 
+![Sprint3Backlog1](https://user-images.githubusercontent.com/70723400/172078076-00fdd672-8782-4dd4-b9c3-6abf176c4463.JPG)
+![Sprint3Backlog2](https://user-images.githubusercontent.com/70723400/172078080-879b4673-df2c-4ab7-8dcc-5ec7c94194d6.JPG)
+![Sprint3Backlog3](https://user-images.githubusercontent.com/70723400/172078082-8c9db9fb-a55e-4c8a-863b-5949075e5e39.JPG)
+![Sprint3Backlog4](https://user-images.githubusercontent.com/70723400/172078083-24cb8cf4-0c3c-4cc2-9cd2-64ad66f8e03f.JPG)
 
 
 - **Ürün Durumu**: 
