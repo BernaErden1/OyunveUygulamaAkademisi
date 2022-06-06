@@ -1,10 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:tarifim/Widgets/mini_header2.dart';
+import 'package:tarifim/Widgets/tarif_anasayfa.dart';
+import 'package:tarifim/firebase/models/tarif_model.dart';
+import 'package:tarifim/firebase/repository/data_repository.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
-
-import '../product/mock_data.dart';
+import 'package:tarifim/tarif_detail/tarif_detail_page.dart';
 import '../product/utility.dart';
-import '../tarif_defteri/tarif_defteri_sayfasi_view_model.dart';
 
 class Anasayfa extends StatefulWidget {
   const Anasayfa({Key? key}) : super(key: key);
@@ -14,60 +16,22 @@ class Anasayfa extends StatefulWidget {
 }
 
 class _AnasayfaState extends State<Anasayfa> {
+  String araKelime = "";
+  final DataRepository repository = DataRepository();
   final TextEditingController _editingController =
       TextEditingController();
-  late final List<TarifDefteriModel> mockList;
-  final List<String> items = [];
 
   @override
   void initState() {
     super.initState();
-    mockList = [
-      mock1,
-      mock2,
-      mock3,
-      mock4,
-      mock5,
-      mock6,
-      mock7,
-      mock8,
-      mock9,
-      mock10,
-      mock11
-    ];
-
-    items.addAll(mockList.map((e) => e.title));
-  }
-
-  void filterSearchResults(String query) {
-    List<String> dummySearchList = [];
-    dummySearchList.addAll(mockList.map((e) => e.title));
-    if (query.isNotEmpty) {
-      List<String> dummyListData = [];
-      for (var item in dummySearchList) {
-        if (item.contains(query)) {
-          dummyListData.add(item);
-        }
-      }
-      setState(() {
-        items.clear();
-        items.addAll(dummyListData);
-      });
-      return;
-    } else {
-      setState(() {
-        items.clear();
-        items.addAll(mockList.map((e) => e.title));
-      });
-    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            body: Column(
+      body: Column(
         children: [
-          BaslikBarMini2(yazi: "Mutfakta Neler Var?"),
+          BaslikBarMini2(yazi: TurkceItemler().uygIsmi),
           spaceSize(),
           Padding(
             padding: PaddingDimen().horizaontalPadding,
@@ -84,31 +48,51 @@ class _AnasayfaState extends State<Anasayfa> {
             ),
           ),
           Expanded(
-            child: SingleChildScrollView(
-              padding: PaddingDimen().horizaontalPadding,
-              child: ListView.separated(
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(
-                        items[index],
-                        style: TextStyle(
-                            color: Colors.black87,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "Montserrat",
-                            fontSize: 18),
-                      ),
-                    );
-                  },
-                  separatorBuilder:
-                      (BuildContext context, int index) {
-                    return Divider(color: ColorsUtility().thirdColor);
-                  },
-                  itemCount: items.length),
+            child: StreamBuilder<QuerySnapshot>(
+              stream: araKelime == ""
+                  ? repository.getStream()
+                  : repository.getItemWith(araKelime),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return const LinearProgressIndicator();
+                }
+                return _buildList(context, snapshot.data?.docs ?? []);
+              },
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget _buildList(
+      BuildContext context, List<DocumentSnapshot>? snapshot) {
+    return ListView(
+      children: snapshot!
+          .map((data) => _buildListItem(context, data))
+          .toList(),
+    );
+  }
+
+  Widget _buildListItem(
+      BuildContext context, DocumentSnapshot snapshot) {
+    final tarif = TarifModel.fromSnapshot(snapshot);
+
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  TarifDetail(id: tarif.referenceId!),
+            ));
+      },
+      child: TarifCard(
+        baslik: tarif.baslik,
+        desc: tarif.desc,
+        image: tarif.image,
+        malzemeler: tarif.malzemeler,
+        isSave: tarif.isSave,
       ),
     );
   }
@@ -117,7 +101,7 @@ class _AnasayfaState extends State<Anasayfa> {
     return TextField(
       controller: _editingController,
       onChanged: (value) {
-        filterSearchResults(value);
+        araKelime = value;
       },
       keyboardType: TextInputType.text,
       textInputAction: TextInputAction.done,
@@ -131,20 +115,17 @@ class _AnasayfaState extends State<Anasayfa> {
           focusedBorder: OutlineInputBorder(
               borderSide:
                   BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
+              borderRadius: MyRadius().borderRad),
           enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
                 color: ColorsUtility().primaryColor,
               ),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
+              borderRadius: MyRadius().borderRad),
           border: OutlineInputBorder(
               borderSide:
                   BorderSide(color: ColorsUtility().thirdColor),
-              borderRadius:
-                  const BorderRadius.all(Radius.circular(20))),
-          labelText: "Ara",
+              borderRadius: MyRadius().borderRad),
+          labelText: TurkceItemler().ara,
           labelStyle: TextStyle(
             color: ColorsUtility().thirdColor,
           ),
@@ -167,10 +148,12 @@ class _AnasayfaState extends State<Anasayfa> {
                 ColorsUtility().primaryColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: MyRadius().borderRad,
                     side: BorderSide(
                         color: ColorsUtility().thirdColor)))),
-        onPressed: () {},
+        onPressed: () {
+          setState(() {});
+        },
         child: Text(
           TurkceItemler().ara,
           style: TextStyle(

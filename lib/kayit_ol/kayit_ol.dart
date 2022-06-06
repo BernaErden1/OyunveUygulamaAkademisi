@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:tarifim/auth_controller.dart';
+
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
 
 import '../Widgets/header_main.dart';
+import '../firebase/auth_controller.dart';
 
 class KayitOl extends StatefulWidget {
   const KayitOl({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _KayitOlState extends State<KayitOl> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            BaslikBar(),
+            const BaslikBar(),
             spaceSize(size: 60),
             _welcome(),
             spaceSize(),
@@ -62,21 +63,20 @@ class _KayitOlState extends State<KayitOl> {
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                    color:
+                                        ColorsUtility().thirdColor),
+                                borderRadius: MyRadius().borderRad),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: ColorsUtility().primaryColor,
                                 ),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                borderRadius: MyRadius().borderRad),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
-                            labelText: "Kullanıcı Adı",
+                                    color:
+                                        ColorsUtility().thirdColor),
+                                borderRadius: MyRadius().borderRad),
+                            labelText: TurkceItemler().kullaniciAdi,
                             labelStyle: TextStyle(
                               color: ColorsUtility().thirdColor,
                             ),
@@ -105,21 +105,20 @@ class _KayitOlState extends State<KayitOl> {
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                    color:
+                                        ColorsUtility().thirdColor),
+                                borderRadius: MyRadius().borderRad),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: ColorsUtility().primaryColor,
                                 ),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
+                                borderRadius: MyRadius().borderRad),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: ColorsUtility().thirdColor),
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20))),
-                            labelText: "Email",
+                                    color:
+                                        ColorsUtility().thirdColor),
+                                borderRadius: MyRadius().borderRad),
+                            labelText: TurkceItemler().kullaniciEmail,
                             labelStyle: TextStyle(
                               color: ColorsUtility().thirdColor,
                             ),
@@ -138,7 +137,9 @@ class _KayitOlState extends State<KayitOl> {
                           obscureText: _isSecure,
                           validator: MyFormFieldValidator().isNotEmpy,
                           keyboardType: TextInputType.visiblePassword,
-                          autofillHints: const [AutofillHints.password],
+                          autofillHints: const [
+                            AutofillHints.password
+                          ],
                           textInputAction: TextInputAction.done,
                           cursorColor: ColorsUtility().thirdColor,
                           style: TextStyle(
@@ -147,21 +148,21 @@ class _KayitOlState extends State<KayitOl> {
                           decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                      color: ColorsUtility().thirdColor),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(20))),
+                                      color:
+                                          ColorsUtility().thirdColor),
+                                  borderRadius: MyRadius().borderRad),
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: ColorsUtility().primaryColor,
+                                    color:
+                                        ColorsUtility().primaryColor,
                                   ),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(20))),
+                                  borderRadius: MyRadius().borderRad),
                               border: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                      color: ColorsUtility().thirdColor),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(20))),
-                              labelText: "Şifre",
+                                      color:
+                                          ColorsUtility().thirdColor),
+                                  borderRadius: MyRadius().borderRad),
+                              labelText: TurkceItemler().sifre,
                               labelStyle: TextStyle(
                                   color: ColorsUtility().thirdColor,
                                   fontWeight: FontWeight.w500,
@@ -173,39 +174,45 @@ class _KayitOlState extends State<KayitOl> {
                               prefixIcon: _isSecure
                                   ? Icon(
                                       Icons.lock_outlined,
-                                      color: ColorsUtility().thirdColor,
+                                      color:
+                                          ColorsUtility().thirdColor,
                                     )
                                   : Icon(
                                       Icons.lock_open_outlined,
-                                      color: ColorsUtility().thirdColor,
+                                      color:
+                                          ColorsUtility().thirdColor,
                                     ),
                               suffixIcon: IconButton(
                                   onPressed: () {
                                     _changeSecure();
                                   },
                                   icon: AnimatedCrossFade(
-                                    firstChild:
-                                        const Icon(Icons.visibility_outlined),
-                                    secondChild: const Icon(
-                                        Icons.visibility_off_outlined),
+                                    firstChild: const Icon(
+                                        Icons.visibility_outlined),
+                                    secondChild: const Icon(Icons
+                                        .visibility_off_outlined),
                                     crossFadeState: _isSecure
                                         ? CrossFadeState.showFirst
                                         : CrossFadeState.showSecond,
-                                    duration: const Duration(seconds: 1),
+                                    duration:
+                                        const Duration(seconds: 1),
                                   ),
-                                  color: ColorsUtility().thirdColor))),
+                                  color:
+                                      ColorsUtility().thirdColor))),
                       spaceSize(),
                       //Kayıt ol butonu
                       ElevatedButton(
                           style: ButtonStyle(
                               fixedSize: MaterialStateProperty.all<Size>(
                                   const Size(200, 50)),
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  ColorsUtility().primaryColor),
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(
+                                      ColorsUtility().primaryColor),
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius:
+                                          MyRadius().borderRad,
                                       side: BorderSide(
                                           color: ColorsUtility().thirdColor)))),
                           onPressed: () async{
@@ -222,7 +229,8 @@ class _KayitOlState extends State<KayitOl> {
                           child: Text(
                             TurkceItemler().kayitOl,
                             style: TextStyle(
-                                color: ColorsUtility().backgroundColor,
+                                color:
+                                    ColorsUtility().backgroundColor,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: "Montserrat",
                                 fontSize: 28),
@@ -249,7 +257,7 @@ class _KayitOlState extends State<KayitOl> {
     return Padding(
         padding: PaddingDimen().horizaontalPadding,
         child: Text(
-          "Hoşgeldiniz",
+          TurkceItemler().welcome,
           style: TextStyle(
               color: ColorsUtility().secondaryColor,
               fontWeight: FontWeight.w300,
