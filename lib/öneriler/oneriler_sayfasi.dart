@@ -32,6 +32,7 @@ class _OnerilerSayfasiState extends State<OnerilerSayfasi> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     final bottomPadding = MediaQuery.of(context).padding.bottom;
