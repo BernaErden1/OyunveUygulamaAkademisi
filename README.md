@@ -140,18 +140,18 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 - **Sprint Review**: 
 
-*Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
-*3. sprint için her ekip üyesi firebase kısımlarına çalışılmalı.
-*Zaman planlamasına bağlı olarak tasarım geliştirilmesi için beyin fırtınası yapılabilir.
+* Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
+* 3. sprint için her ekip üyesi firebase kısımlarına çalışılmalı.
+* Zaman planlamasına bağlı olarak tasarım geliştirilmesi için beyin fırtınası yapılabilir.
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
 
-*Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
-*Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
-*Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
-*İşler haftanın sonlarına sıkıştırılmadan daha çok başlarında neticelendirilmeye çalışılmalı.
+* Ekip içinde herkesin fikri dikkate alınarak kararlar alındı ve ilerleme sağlandı.
+* Sprint 2'de backlog'lar güncellenerek daha sistematik ilerlendi ve hedeflenen puana ulaşıldı.
+* Daily scrumlar 3.sprintte daha rutin saatlerde yapılabilir.
+* İşler haftanın sonlarına sıkıştırılmadan daha çok başlarında neticelendirilmeye çalışılmalı.
 
 
 
@@ -159,11 +159,11 @@ Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilo
 
 **Sprint Notları:** User Story'ler product backlog'ların içine yazılmıştır. Product backlog item'lara tıklandığında hikayelerin detayları okunabilir.
 
-*Uygulama firebase bağlandı.
-*Bir önceki sprintte yapılan ekran görüntüleri ile ilgili düzeltmeler yapıldı. Alternatif header tasarımları yapıldı.
-*Firebase autantication ile giriş yap ekranı, kayıt ol ekranı, şifremi unuttum yapıları tamamlandı.
-*Tariflerin kaydını ve profil kayıtlarınon gösterilmesi için databese oluşturuldu.
-*Apk dosyası oluşturuldu.
+* Uygulama firebase bağlandı.
+* Bir önceki sprintte yapılan ekran görüntüleri ile ilgili düzeltmeler yapıldı. Alternatif header tasarımları yapıldı.
+* Firebase autantication ile giriş yap ekranı, kayıt ol ekranı, şifremi unuttum yapıları tamamlandı.
+* Tariflerin kaydını ve profil kayıtlarınon gösterilmesi için databese oluşturuldu.
+* Apk dosyası oluşturuldu.
 
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
@@ -191,9 +191,15 @@ Tasarımların kodlar tarafında tasarlanacak ekranlara eforlar baz alınarak ve
 
 
 - **Sprint Review**: 
-(?)
+* Planlanan şekilde görevlendirmelere ve uygulamalara devam edildi.
+* Firebase için ayrıca detay çalışıldı.
+* Firebase kısmında sadece android kısmı bağlandı ios kısmı bağlanamadı.
+* Bazı yöntemlerde hatayla karşılaşıldığı için kodlama konusunda işlemlerin baştan yapıldığı görüldü.
 Sprint Review katılımcıları: Berna Erden, Zeynep Harputlugil, Hava İsrapilova, Enes Malik Kaptan, Yakup Soylu
 
 
 - **Sprint Retrospective:**
-(?)
+* En yoğun sprint döneminin son sprint olduğu görüldü.
+* Firebase bağlama işlemi kısmında çok fazla zaman kaybedildiği ve iletişimin biraz daha az olması, iş ve sınav yoğunlukların bu sprintle çok fazla çakışması nedeniyle son haftaya işlerin sıkıştığı görüldü.
+* Son sprintle beraber tüm sprintler boyunca herkesin uyumlu ve yardımsever bir tavır sergilediği görüldü.
+* Toplantı saatleri konusunda çok kolay organize olundu ve whatsapp içerisinde yapılan gündelik konuşmalarda kişilerin ulaşılabilirliği üst seviyeydi.
