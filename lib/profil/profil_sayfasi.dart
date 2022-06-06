@@ -1,19 +1,40 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:tarifim/Widgets/mini_header.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/tarif_kartlari_data.dart';
 import 'package:tarifim/product/utility.dart';
 import 'package:tarifim/profil_ayarlar/profil_ayarlar_sayfasi.dart';
 
-import '../Widgets/mini_header2.dart';
-
 class ProfilSayfasi extends StatefulWidget {
   const ProfilSayfasi({Key? key}) : super(key: key);
 
-  @override
+  @override 
   _ProfilSayfasi createState() => _ProfilSayfasi();
 }
 
 class _ProfilSayfasi extends State {
+  @override
+  void initState() {
+    super.initState();
+    getImageURL().then((value){
+      profilresmi = value;
+      setState(() {
+        
+      });
+    });
+    
+  }
+  String? userName;
+  String? profilresmi;
+  Future<String?> getImageURL()async{
+    return await FirebaseStorage.instance.ref().child("profilresimleri").child(FirebaseAuth.instance.currentUser!.uid).child("profilresmi.png").getDownloadURL();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +42,7 @@ class _ProfilSayfasi extends State {
         body: Column(
           children: [
             //Profilim yazısı
-            BaslikBarMini2(yazi: TurkceItemler().profilim),
+            BaslikBarMini(yazi: TurkceItemler().profilim),
             Expanded(
               child: Container(
                 height: MediaQuery.of(context).size.height,
@@ -33,7 +54,7 @@ class _ProfilSayfasi extends State {
                 ),
                 child: Column(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                     //Kullanıcı resmi ve Kullanıcı adı bölümü
@@ -54,14 +75,14 @@ class _ProfilSayfasi extends State {
                                       blurRadius: 10,
                                       color: Colors.black
                                           .withOpacity(0.1),
-                                      offset: const Offset(0, 5))
+                                      offset: Offset(0, 5))
                                 ],
                                 shape: BoxShape.circle,
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                        "assets/kullanici.jpg"),
+                                image: DecorationImage(
+                                    image: profilresmi == null ? AssetImage(
+                                        "assets/kullanici.jpg") : NetworkImage(profilresmi!) as ImageProvider,
                                     fit: BoxFit.cover))),
-                        const SizedBox(
+                        SizedBox(
                           width: 13,
                         ),
                         Expanded(
@@ -98,7 +119,7 @@ class _ProfilSayfasi extends State {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        const ProfilAyarlarSayfasi(),
+                                        ProfilAyarlarSayfasi(),
                                   ));
                             },
                           ),
@@ -110,7 +131,7 @@ class _ProfilSayfasi extends State {
                     ),
                     //Takip edilen, Takipçi, Tariflerim kutusu
                     Container(
-                      padding: const EdgeInsets.only(
+                      padding: EdgeInsets.only(
                           top: 18, left: 30, right: 30),
                       width: MediaQuery.of(context).size.width,
                       height: 90,
@@ -119,7 +140,7 @@ class _ProfilSayfasi extends State {
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [
                             BoxShadow(
-                              offset: const Offset(5, 10),
+                              offset: Offset(5, 10),
                               blurRadius: 10,
                               color: ColorsUtility()
                                   .yazi
@@ -127,8 +148,6 @@ class _ProfilSayfasi extends State {
                             )
                           ]),
                       child: Row(
-                        mainAxisAlignment:
-                            MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Column(
@@ -143,7 +162,7 @@ class _ProfilSayfasi extends State {
                                         .backgroundColor,
                                     size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -157,7 +176,7 @@ class _ProfilSayfasi extends State {
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 3,
                               ),
                               Text(
@@ -171,6 +190,9 @@ class _ProfilSayfasi extends State {
                               )
                             ],
                           ),
+                          SizedBox(
+                            width: 30,
+                          ),
                           Column(
                             children: [
                               Row(
@@ -183,7 +205,7 @@ class _ProfilSayfasi extends State {
                                         .backgroundColor,
                                     size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -197,7 +219,7 @@ class _ProfilSayfasi extends State {
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 4,
                               ),
                               Text(
@@ -210,6 +232,9 @@ class _ProfilSayfasi extends State {
                                     fontSize: 14),
                               )
                             ],
+                          ),
+                          SizedBox(
+                            width: 30,
                           ),
                           Column(
                             children: [
@@ -224,7 +249,7 @@ class _ProfilSayfasi extends State {
                                         .backgroundColor,
                                     size: 30,
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 3,
                                   ),
                                   Text(
@@ -238,7 +263,7 @@ class _ProfilSayfasi extends State {
                                   )
                                 ],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 3,
                               ),
                               Text(
@@ -255,7 +280,7 @@ class _ProfilSayfasi extends State {
                         ],
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
                     //Takipçilerim başlığı
@@ -271,7 +296,7 @@ class _ProfilSayfasi extends State {
                     ]),
 
                     //Takipçilerim görüntüleme
-                    SizedBox(
+                    Container(
                       width: MediaQuery.of(context).size.width,
                       height: 70,
                       child: ListView.builder(
@@ -280,7 +305,7 @@ class _ProfilSayfasi extends State {
                             Container(
                               width: 50,
                               height: 50,
-                              margin: const EdgeInsets.only(right: 8),
+                              margin: EdgeInsets.only(right: 8),
                               child: ClipOval(
                                 child: Image.asset(
                                   "assets/${index + 1}.jpg",
@@ -295,7 +320,7 @@ class _ProfilSayfasi extends State {
                         shrinkWrap: true,
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                     //Tariflerim başlığı
@@ -327,19 +352,17 @@ class _ProfilSayfasi extends State {
                                   return Row(
                                     children: [
                                       Container(
-                                        padding:
-                                            const EdgeInsets.only(
-                                                left: 20,
-                                                right: 20,
-                                                top: 25,
-                                                bottom: 15),
+                                        padding: EdgeInsets.only(
+                                            left: 20,
+                                            right: 20,
+                                            top: 25,
+                                            bottom: 15),
                                         width: (MediaQuery.of(context)
                                                 .size
                                                 .width -
                                             30),
                                         height: 200,
-                                        margin:
-                                            const EdgeInsets.all(15),
+                                        margin: EdgeInsets.all(15),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(
@@ -360,8 +383,7 @@ class _ProfilSayfasi extends State {
                                             ),
                                             boxShadow: [
                                               BoxShadow(
-                                                offset: const Offset(
-                                                    5, 10),
+                                                offset: Offset(5, 10),
                                                 blurRadius: 10,
                                                 color: ColorsUtility()
                                                     .yazi
@@ -387,8 +409,7 @@ class _ProfilSayfasi extends State {
                                                         FontWeight
                                                             .w700),
                                               ),
-                                              const SizedBox(
-                                                  height: 35),
+                                              SizedBox(height: 35),
                                               Text(
                                                 tarifKartlariListesi[
                                                         index]
@@ -403,8 +424,7 @@ class _ProfilSayfasi extends State {
                                                         FontWeight
                                                             .w700),
                                               ),
-                                              const SizedBox(
-                                                  height: 35),
+                                              SizedBox(height: 35),
                                               Row(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment
@@ -431,18 +451,20 @@ class _ProfilSayfasi extends State {
                                                                     spreadRadius: 2,
                                                                     blurRadius: 10,
                                                                     color: Colors.black.withOpacity(0.1),
-                                                                    offset: const Offset(0, 10))
+                                                                    offset: Offset(0, 10))
                                                               ],
                                                               shape: BoxShape.circle,
-                                                              image: const DecorationImage(image: AssetImage("assets/kullanici.jpg"), fit: BoxFit.cover))),
-                                                      const SizedBox(
+                                                              image: DecorationImage(image: AssetImage("assets/kullanici.jpg"), fit: BoxFit.cover))),
+                                                      SizedBox(
                                                         width: 5,
                                                       ),
                                                       Container(
-                                                        padding: const EdgeInsets
-                                                                .only(
-                                                            left: 5,
-                                                            right: 5),
+                                                        padding: EdgeInsets
+                                                            .only(
+                                                                left:
+                                                                    5,
+                                                                right:
+                                                                    5),
                                                         decoration: BoxDecoration(
                                                             color: Colors
                                                                 .white
@@ -453,7 +475,7 @@ class _ProfilSayfasi extends State {
                                                                     15),
                                                             boxShadow: [
                                                               BoxShadow(
-                                                                offset: const Offset(
+                                                                offset: Offset(
                                                                     5,
                                                                     10),
                                                                 blurRadius:
@@ -483,9 +505,8 @@ class _ProfilSayfasi extends State {
                                                       child:
                                                           Container()),
                                                   Container(
-                                                    padding:
-                                                        const EdgeInsets
-                                                                .only(
+                                                    padding: EdgeInsets
+                                                        .only(
                                                             left: 5,
                                                             right: 5),
                                                     decoration:
@@ -508,7 +529,7 @@ class _ProfilSayfasi extends State {
                                                                 .thirdColor,
                                                             size: 18,
                                                           ),
-                                                          const SizedBox(
+                                                          SizedBox(
                                                               width:
                                                                   7),
                                                           Text(
@@ -544,3 +565,4 @@ class _ProfilSayfasi extends State {
         ));
   }
 }
+
