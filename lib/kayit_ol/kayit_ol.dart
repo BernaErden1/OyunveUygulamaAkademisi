@@ -1,12 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:tarifim/product/dil/turkce_itemler.dart';
-import 'package:tarifim/product/utility.dart';
 
 import '../Widgets/header_main.dart';
 import '../firebase/auth_controller.dart';
+import '../product/utility.dart';
 
 class KayitOl extends StatefulWidget {
   const KayitOl({Key? key}) : super(key: key);
@@ -65,7 +63,7 @@ class _KayitOlState extends State<KayitOl> {
                                 borderSide: BorderSide(
                                     color:
                                         ColorsUtility().thirdColor),
-                                borderRadius: MyRadius().borderRad),
+                                borderRadius: MyRadius().borderRad ),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: ColorsUtility().primaryColor,

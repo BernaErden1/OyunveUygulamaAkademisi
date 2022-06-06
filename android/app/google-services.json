@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "505044033557",
+    "firebase_url": "https://tarifim-5bab9-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "tarifim-5bab9",
     "storage_bucket": "tarifim-5bab9.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "505044033557-6h09og2vgbhokotph2ebrctck39fbvoo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.takim98.tarifim.tarifim",
+            "certificate_hash": "2531397df64b3a116d20845cf59ff51959abd9e4"
+          }
+        },
         {
           "client_id": "505044033557-okv0fhakto2agrqe25ij4hjtt5io5uda.apps.googleusercontent.com",
           "client_type": 3

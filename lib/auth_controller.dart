@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tarifim/anasayfa/anasayfa.dart';
 import 'package:tarifim/giris_yap/giris_yap.dart';
 import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/utility.dart';
@@ -10,6 +9,8 @@ class AuthController extends GetxController {
   static AuthController instance = Get.find();
   late Rx<User?> _user;
   FirebaseAuth auth = FirebaseAuth.instance;
+
+
 
   @override
   void onReady(){
@@ -25,7 +26,7 @@ class AuthController extends GetxController {
       print("Giriş Sayfası");
       Get.offAll(()=>GirisYap());
     }else{
-      Get.offAll(()=>GirisYap());
+      Get.offAll(()=>MainPage());
     }
   }
 
@@ -66,7 +67,13 @@ class AuthController extends GetxController {
       );
     }
   }
+
   Future<void> logOut()async {
     await auth.signOut();
   }
+
 }
+
+
+
+
