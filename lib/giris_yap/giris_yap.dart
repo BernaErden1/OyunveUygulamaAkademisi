@@ -5,7 +5,6 @@ import 'package:tarifim/kayit_ol/kayit_ol.dart';
 import 'package:tarifim/main_page.dart';
 import 'package:tarifim/product/dil/turkce_itemler.dart';
 import 'package:tarifim/product/utility.dart';
-import 'package:tarifim/profil/profil_sayfasi.dart';
 
 import 'package:tarifim/sifremi_unuttum/sifremi_unuttum.dart';
 
@@ -158,7 +157,6 @@ class _GirisYapState extends State<GirisYap> {
                         color: ColorsUtility().secondaryColor,
                       ),
                       spaceSize(),
-                      _signInGoogle(),
                       spaceSize(),
                       _logIn()
                     ],
@@ -198,23 +196,6 @@ class _GirisYapState extends State<GirisYap> {
         ));
   }
 
-  TextButton _signInGoogle() {
-    return TextButton.icon(
-        onPressed: () {},
-        icon: Icon(
-          Icons.g_mobiledata_outlined,
-          size: 40,
-          color: ColorsUtility().primaryColor,
-        ),
-        label: Text(
-          TurkceItemler().loginGoogle,
-          style: TextStyle(
-              color: ColorsUtility().primaryColor,
-              fontWeight: FontWeight.w600,
-              fontFamily: "PlusJakarta",
-              fontSize: 22),
-        ));
-  }
 
   ElevatedButton _girisYapButton() {
     return ElevatedButton(

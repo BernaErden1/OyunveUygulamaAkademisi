@@ -240,7 +240,6 @@ class _KayitOlState extends State<KayitOl> {
                         color: ColorsUtility().secondaryColor,
                       ),
                       spaceSize(),
-                      _signInGoogle(),
                       spaceSize(),
                     ],
                   ),
@@ -264,21 +263,4 @@ class _KayitOlState extends State<KayitOl> {
         ));
   }
 
-  TextButton _signInGoogle() {
-    return TextButton.icon(
-        onPressed: () {},
-        icon: Icon(
-          Icons.g_mobiledata_outlined,
-          size: 40,
-          color: ColorsUtility().primaryColor,
-        ),
-        label: Text(
-          TurkceItemler().loginGoogle,
-          style: TextStyle(
-              color: ColorsUtility().primaryColor,
-              fontWeight: FontWeight.w600,
-              fontFamily: "PlusJakarta",
-              fontSize: 22),
-        ));
-  }
 }
