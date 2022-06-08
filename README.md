@@ -1,5 +1,7 @@
 # tarifim
 
+Not: Sprint notları "main branch" te yer almaktadır. 
+
 A new Flutter project.
 
 ## Getting Started
